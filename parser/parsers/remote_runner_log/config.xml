@@ -1,0 +1,8 @@
+<nodelist>
+	<node idx="1" name="FRACTAL"/>
+	<node idx="2" name="MGMT"/>
+	<node idx="3" name="CONFIG_FILE"/>
+	<node idx="4" name="PT"/>
+	<node idx="5" name="OPTIMUS"/>
+	<node idx="6" name="CT"/>
+</nodelist>

@@ -1,0 +1,16 @@
+^ [name="C"];
+^ [name="B"];
+^ [name="A"];
+^ [name="D"];
+A->B [msg="ab()" tag="2" data="tooltip" url="http://stackoverflow.com"];
+B->C [msg="bc(TRUE)" url="http://news.bbc.co.uk"];
+  ---  [ title="If more to run" ID="*" ];
+{B} [state="shutting down" url="http://cjira:8080" msg="msg(shutdown)"];
+<B C> [title="Spanning Box" sev="info"];
+<A> [title="error occurred" sev="critical"];
+<A> [title="warning occurred" sev="major"];
+<B> [title="box with a url" sev="minor" url="http://cjira:8080"];
+<B> [title="box" sev="info" url="http://en.wikipedia.org"];
+<B> [title="box" sev="intermittent"];
+<A> [title="error cleared" sev="clear" data="tooltip"];
+<A B> [title="error cleared" sev="clear" data="tooltip"];

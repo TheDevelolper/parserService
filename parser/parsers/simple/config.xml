@@ -1,0 +1,19 @@
+<nodelist>
+	<node idx="2" name="S-FAP_RRC"/>
+    <node idx="2" name="S-FAP_MMGMM"/>
+    <node idx="2" name="S-FAP_GAC"/>
+  	<node idx="2" name="GANC"/>
+  	<node idx="2" name="GANC"/>
+  	<node idx="3" name="NW"/>
+  	<node idx="4" name="CN"/>
+  	<node idx="18" name="GAN"/>
+  	<node idx="19" name="GAC"/>
+	<node idx="20" name="GANIF"/>
+	<node idx="25" name="SC"/>	
+	<node idx="50" name="CC"/>
+	<node idx="51" name="MMGMM"/>
+	<node idx="52" name="RRC"/>
+	<node idx="56" name="CS"/>
+	
+    <node idx="67" name="UE"/>
+</nodelist>

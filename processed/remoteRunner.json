@@ -1,0 +1,1570 @@
+{
+  "_comment": "remote_runner_log Log Parser output. Written by Donald Jones",
+  "meta_data": {
+    "logfile": "/vagrant/uploads/remoteRunner.log",
+    "parser": "remote_runner_log",
+    "date": "Wed May 10 12:51:20 UTC 2017"
+  },
+"config":
+[
+   {
+      "name" : "FRACTAL"
+   },
+   {
+      "name" : "MGMT"
+   },
+   {
+      "name" : "CONFIG_FILE"
+   },
+   {
+      "name" : "PT"
+   },
+   {
+      "name" : "OPTIMUS"
+   },
+   {
+      "name" : "128.10.1.4"
+   }
+]
+
+
+	,"events":
+[
+   {
+      "type" : "ev",
+      "data" : "pid=17442 cmd=['ssh', '-tt', 'fractal@optimus', 'stty -echo; { cd /local_home/fractal/workspaces/fractal/Test/optimus_clone/Optimus/optimus; sudo python optimus.py ; }']",
+      "sev" : 1,
+      "date" : "13:50:08.626",
+      "event" : "Starting",
+      "node" : "OPTIMUS",
+      "line" : 2
+   },
+   {
+      "type" : "ev",
+      "sev" : 2,
+      "data" : "Load Config: fractal-prime",
+      "date" : "13:50:09.174",
+      "event" : "Load Config: fractal-p...",
+      "node" : "CONFIG_FILE",
+      "line" : 161
+   },
+   {
+      "to" : "OPTIMUS",
+      "date" : "13:50:09.174",
+      "type" : "msg",
+      "from" : "CONFIG_FILE",
+      "msg" : "ip add pt 128.10.1.2 29'",
+      "line" : 162
+   },
+   {
+      "line" : 162.1,
+      "node" : "PT",
+      "date" : "13:50:09.174",
+      "event" : "Added PT: 128.10.1.2",
+      "sev" : 5,
+      "type" : "ev"
+   },
+   {
+      "msg" : "Gratuitous ARP[ 128.10.1.2 ]",
+      "line" : 164,
+      "date" : "13:50:09.175",
+      "to" : "PT",
+      "type" : "msg",
+      "from" : "OPTIMUS"
+   },
+   {
+      "msg" : "ltt add 128.10.1.0 27 ptmetric=1 subnetinfo=2 validity=0'",
+      "line" : 165,
+      "date" : "13:50:09.176",
+      "to" : "OPTIMUS",
+      "from" : "CONFIG_FILE",
+      "type" : "msg"
+   },
+   {
+      "msg" : "route add PT 0.0.0.0 0 128.10.1.1'",
+      "line" : 167,
+      "date" : "13:50:09.176",
+      "to" : "OPTIMUS",
+      "from" : "CONFIG_FILE",
+      "type" : "msg"
+   },
+   {
+      "msg" : "keydir ../Keys'",
+      "line" : 169,
+      "date" : "13:50:09.177",
+      "to" : "OPTIMUS",
+      "type" : "msg",
+      "from" : "CONFIG_FILE"
+   },
+   {
+      "msg" : "lrusat 8'",
+      "line" : 171,
+      "date" : "13:50:09.178",
+      "to" : "OPTIMUS",
+      "type" : "msg",
+      "from" : "CONFIG_FILE"
+   },
+   {
+      "type" : "msg",
+      "from" : "CONFIG_FILE",
+      "to" : "OPTIMUS",
+      "date" : "13:50:09.178",
+      "line" : 175,
+      "msg" : "cmdcomplete on'"
+   },
+   {
+      "data" : ": dropped '25-HMI  : >>> log path /tmp/optimus.log\n: dropped '25-HMI  : Logging to file \"/tmp/optimus.log\" started\\r\\n\n: dropped '25-HMI  : Command complete: log path /tmp/optimus.log\\r\\n\n",
+      "to" : "OPTIMUS",
+      "date" : "13:50:09.178",
+      "type" : "msg",
+      "from" : "CONFIG_FILE",
+      "msg" : "log path /tmp/optimus.log'",
+      "line" : 178
+   },
+   {
+      "line" : 181,
+      "msg" : "log level INFO'",
+      "from" : "CONFIG_FILE",
+      "type" : "msg",
+      "date" : "13:50:09.178",
+      "to" : "OPTIMUS",
+      "data" : ": dropped '25-HMI  : >>> log level INFO\n: dropped '25-HMI  : Logging level for all categories set to INFO (20)\\r\\n\n: dropped '25-HMI  : Command complete: log level INFO\\r\\n\n"
+   },
+   {
+      "msg" : "log set CRTNG debug'",
+      "line" : 184,
+      "data" : ": dropped '25-HMI  : >>> log set CRTNG debug\n: dropped '25-HMI  : Logging level for category CRTNG set to DEBUG (10)\\r\\n\n: dropped '25-HMI  : Command complete: log set CRTNG debug\\r\\n\n",
+      "to" : "OPTIMUS",
+      "date" : "13:50:09.178",
+      "type" : "msg",
+      "from" : "CONFIG_FILE"
+   },
+   {
+      "data" : ": dropped '25-HMI  : >>> log set CRLXF debug\n: dropped '25-HMI  : Logging level for category CRLXF set to DEBUG (10)\\r\\n\n: dropped '25-HMI  : Command complete: log set CRLXF debug\\r\\n\n",
+      "to" : "OPTIMUS",
+      "date" : "13:50:09.178",
+      "type" : "msg",
+      "from" : "CONFIG_FILE",
+      "msg" : "log set CRLXF debug'",
+      "line" : 187
+   },
+   {
+      "type" : "msg",
+      "from" : "CONFIG_FILE",
+      "data" : ": dropped '25-HMI  : >>> log set PTFTP debug\n: dropped '25-HMI  : Logging level for category PTFTP set to DEBUG (10)\\r\\n\n: dropped '25-HMI  : Command complete: log set PTFTP debug\\r\\n\n",
+      "date" : "13:50:09.178",
+      "to" : "OPTIMUS",
+      "line" : 190,
+      "msg" : "log set PTFTP debug'"
+   },
+   {
+      "type" : "msg",
+      "from" : "CONFIG_FILE",
+      "data" : ": dropped '25-HMI  : >>> log set SAD debug\n: dropped '25-HMI  : Logging level for category SAD set to DEBUG (10)\\r\\n\n: dropped '25-HMI  : Command complete: log set SAD debug\\r\\n\n",
+      "date" : "13:50:09.178",
+      "to" : "OPTIMUS",
+      "line" : 193,
+      "msg" : "log set SAD debug'"
+   },
+   {
+      "data" : ": dropped '25-HMI  : >>> log set OPTIM info\n: dropped '25-HMI  : Logging level for category OPTIM set to INFO (20)\\r\\n\n: dropped '25-HMI  : Command complete: log set OPTIM info\\r\\n\n",
+      "date" : "13:50:09.178",
+      "to" : "OPTIMUS",
+      "type" : "msg",
+      "from" : "CONFIG_FILE",
+      "msg" : "log set OPTIM info'",
+      "line" : 196
+   },
+   {
+      "node" : "CONFIG_FILE",
+      "line" : 199,
+      "type" : "ev",
+      "sev" : 5,
+      "date" : "13:50:09.178",
+      "event" : "Config Load Complete"
+   },
+   {
+      "sev" : 5,
+      "event" : "READY",
+      "date" : "13:50:09.178",
+      "type" : "ev",
+      "node" : "OPTIMUS",
+      "line" : 200
+   },
+   {
+      "line" : 202,
+      "msg" : "CLI: start-as  --import ../../skd --config=fractal-skd-cka --importonly=cka,ica,skdHttp,infCertStore,bondstone,mgmt,pts",
+      "from" : "FRACTAL",
+      "type" : "msg",
+      "date" : "13:50:34.629",
+      "to" : "OPTIMUS",
+      "data" : "start-as  --import ../../skd --config=fractal-skd-cka --importonly=cka,ica,skdHttp,infCertStore,bondstone,mgmt,pts\n: suppressed '25-HMI  : Command complete: quit\\r\\n\n"
+   },
+   {
+      "node" : "OPTIMUS",
+      "line" : 204,
+      "sev" : 5,
+      "date" : "13:50:34.632",
+      "event" : "Gracefully Exiting",
+      "type" : "ev"
+   },
+   {
+      "date" : "13:50:36.038",
+      "event" : "Starting",
+      "sev" : 1,
+      "data" : "pid=17542 cmd=['ssh', '-tt', 'fractal@optimus', 'stty -echo; { cd /local_home/fractal/workspaces/fractal/Test/optimus_clone/Optimus/optimus; sudo python optimus.py  --import ../../skd --config=fractal-skd-cka --importonly=cka,ica,skdHttp,infCertStore,bondstone,mgmt,pts; }']",
+      "type" : "ev",
+      "line" : 208,
+      "node" : "OPTIMUS"
+   },
+   {
+      "node" : "OPTIMUS",
+      "line" : 344,
+      "type" : "ev",
+      "sev" : 2,
+      "data" : "'30-ICA  : Could not find a parent plugin to retrieve a state ID for. Generating a new one'",
+      "date" : "13:50:37.768",
+      "event" : " Could not find a parent plugin to retrieve a state ID for. Generating a new one'"
+   },
+   {
+      "line" : 356,
+      "node" : "CONFIG_FILE",
+      "event" : "Load Config: fractal-s...",
+      "date" : "13:50:37.793",
+      "data" : "Load Config: fractal-skd-cka",
+      "sev" : 2,
+      "type" : "ev"
+   },
+   {
+      "msg" : "keydir ../Keys'",
+      "line" : 357,
+      "date" : "13:50:37.793",
+      "to" : "OPTIMUS",
+      "data" : "25-HMI  : >>> keydir ../Keys\n25-KEYST: Key directory set to ../Keys/\\r\\n\n25-HMI  : >>> ip add pt 128.10.1.2 16\\r\\n\n25-BSTBL: PT address 128.10.1.2 added to Address Assignment Table\\r\\n\n10-ETHER: Optimus -> PT: Gratuitous ARP[ 128.10.1.2 ]\\r\\n\n25-HMI  : >>> ltt add 128.10.1.0 27 ptmetric=1 subnetinfo=2 validity=0\\r\\n\n25-BSTBL: Subnet 128.10.1.0/27 added to Local Topology Table\\r\\n\n25-HMI  : >>> route add PT 0.0.0.0 0 128.10.1.1\\r\\n\n25-BSTBL: PT route to 0.0.0.0/0 via 128.10.1.1 added to Static Routes Table\\r\\n\n25-HMI  : >>> log path /tmp/optimus.log\\r\\n\n25-HMI  : Logging to file \"/tmp/optimus.log\" started\n\\r\\n\n25-HMI  : >>> log level DEBUG\n\\r\\n\n25-HMI  : Logging level for all categories set to DEBUG (10)\\r\\n\n25-HMI  : >>> log set SNMP info\\r\\n\n25-HMI  : Logging level for category SNMP set to INFO (20)\\r\\n\n",
+      "from" : "CONFIG_FILE",
+      "type" : "msg"
+   },
+   {
+      "msg" : "ip add pt 128.10.1.2 16'",
+      "line" : 359,
+      "data" : "25-HMI  : >>> ip add pt 128.10.1.2 16\n25-BSTBL: PT address 128.10.1.2 added to Address Assignment Table\\r\\n\n10-ETHER: Optimus -> PT: Gratuitous ARP[ 128.10.1.2 ]\\r\\n\n25-HMI  : >>> ltt add 128.10.1.0 27 ptmetric=1 subnetinfo=2 validity=0\\r\\n\n25-BSTBL: Subnet 128.10.1.0/27 added to Local Topology Table\\r\\n\n25-HMI  : >>> route add PT 0.0.0.0 0 128.10.1.1\\r\\n\n25-BSTBL: PT route to 0.0.0.0/0 via 128.10.1.1 added to Static Routes Table\\r\\n\n25-HMI  : >>> log path /tmp/optimus.log\\r\\n\n25-HMI  : Logging to file \"/tmp/optimus.log\" started\n\\r\\n\n25-HMI  : >>> log level DEBUG\n\\r\\n\n25-HMI  : Logging level for all categories set to DEBUG (10)\\r\\n\n25-HMI  : >>> log set SNMP info\\r\\n\n25-HMI  : Logging level for category SNMP set to INFO (20)\\r\\n\n25-HMI  : >>> log set OPTIM info\\r\\n\n25-HMI  : Logging level for category OPTIM set to INFO (20)\n",
+      "date" : "13:50:37.793",
+      "to" : "OPTIMUS",
+      "type" : "msg",
+      "from" : "CONFIG_FILE"
+   },
+   {
+      "node" : "PT",
+      "line" : 359.1,
+      "sev" : 5,
+      "event" : "Added PT: 128.10.1.2",
+      "date" : "13:50:37.793",
+      "type" : "ev"
+   },
+   {
+      "line" : 361,
+      "msg" : "Gratuitous ARP[ 128.10.1.2 ]",
+      "type" : "msg",
+      "from" : "OPTIMUS",
+      "to" : "PT",
+      "date" : "13:50:37.797"
+   },
+   {
+      "type" : "msg",
+      "from" : "CONFIG_FILE",
+      "data" : "25-HMI  : >>> ltt add 128.10.1.0 27 ptmetric=1 subnetinfo=2 validity=0\n25-BSTBL: Subnet 128.10.1.0/27 added to Local Topology Table\\r\\n\n25-HMI  : >>> route add PT 0.0.0.0 0 128.10.1.1\\r\\n\n25-BSTBL: PT route to 0.0.0.0/0 via 128.10.1.1 added to Static Routes Table\\r\\n\n25-HMI  : >>> log path /tmp/optimus.log\\r\\n\n25-HMI  : Logging to file \"/tmp/optimus.log\" started\n\\r\\n\n25-HMI  : >>> log level DEBUG\n\\r\\n\n25-HMI  : Logging level for all categories set to DEBUG (10)\\r\\n\n25-HMI  : >>> log set SNMP info\\r\\n\n25-HMI  : Logging level for category SNMP set to INFO (20)\\r\\n\n25-HMI  : >>> log set OPTIM info\\r\\n\n25-HMI  : Logging level for category OPTIM set to INFO (20)\n\\r\\n\n25-HMI  : >>> fileexport length 64\\r\\n\n25-BSDEV: FileExportLength set to 64\\r\\n\n",
+      "date" : "13:50:37.797",
+      "to" : "OPTIMUS",
+      "line" : 362,
+      "msg" : "ltt add 128.10.1.0 27 ptmetric=1 subnetinfo=2 validity=0'"
+   },
+   {
+      "type" : "msg",
+      "from" : "CONFIG_FILE",
+      "data" : "25-HMI  : >>> route add PT 0.0.0.0 0 128.10.1.1\n25-BSTBL: PT route to 0.0.0.0/0 via 128.10.1.1 added to Static Routes Table\\r\\n\n25-HMI  : >>> log path /tmp/optimus.log\\r\\n\n25-HMI  : Logging to file \"/tmp/optimus.log\" started\n\\r\\n\n25-HMI  : >>> log level DEBUG\n\\r\\n\n25-HMI  : Logging level for all categories set to DEBUG (10)\\r\\n\n25-HMI  : >>> log set SNMP info\\r\\n\n25-HMI  : Logging level for category SNMP set to INFO (20)\\r\\n\n25-HMI  : >>> log set OPTIM info\\r\\n\n25-HMI  : Logging level for category OPTIM set to INFO (20)\n\\r\\n\n25-HMI  : >>> fileexport length 64\\r\\n\n25-BSDEV: FileExportLength set to 64\\r\\n\n25-OPTIM: Config file fractal-skd-cka complete!\\r\\n\n25-OPTIM: Optimus ready...\\r\\n\n",
+      "date" : "13:50:37.797",
+      "to" : "OPTIMUS",
+      "line" : 364,
+      "msg" : "route add PT 0.0.0.0 0 128.10.1.1'"
+   },
+   {
+      "line" : 366,
+      "msg" : "log path /tmp/optimus.log'",
+      "type" : "msg",
+      "from" : "CONFIG_FILE",
+      "data" : "25-HMI  : >>> log path /tmp/optimus.log\n25-HMI  : Logging to file \"/tmp/optimus.log\" started\n\\r\\n\n25-HMI  : >>> log level DEBUG\n\\r\\n\n25-HMI  : Logging level for all categories set to DEBUG (10)\\r\\n\n25-HMI  : >>> log set SNMP info\\r\\n\n25-HMI  : Logging level for category SNMP set to INFO (20)\\r\\n\n25-HMI  : >>> log set OPTIM info\\r\\n\n25-HMI  : Logging level for category OPTIM set to INFO (20)\n\\r\\n\n25-HMI  : >>> fileexport length 64\\r\\n\n25-BSDEV: FileExportLength set to 64\\r\\n\n25-OPTIM: Config file fractal-skd-cka complete!\\r\\n\n25-OPTIM: Optimus ready...\\r\\n\ncmdcomplete on\n25-HMI  : Command completion confirmation is enabled\n",
+      "to" : "OPTIMUS",
+      "date" : "13:50:37.797"
+   },
+   {
+      "line" : 369,
+      "msg" : "log level DEBUG'",
+      "from" : "CONFIG_FILE",
+      "type" : "msg",
+      "date" : "13:50:37.799",
+      "to" : "OPTIMUS",
+      "data" : "25-HMI  : >>> log level DEBUG\n\\r\\n\n25-HMI  : Logging level for all categories set to DEBUG (10)\\r\\n\n25-HMI  : >>> log set SNMP info\\r\\n\n25-HMI  : Logging level for category SNMP set to INFO (20)\\r\\n\n25-HMI  : >>> log set OPTIM info\\r\\n\n25-HMI  : Logging level for category OPTIM set to INFO (20)\n\\r\\n\n25-HMI  : >>> fileexport length 64\\r\\n\n25-BSDEV: FileExportLength set to 64\\r\\n\n25-OPTIM: Config file fractal-skd-cka complete!\\r\\n\n25-OPTIM: Optimus ready...\\r\\n\ncmdcomplete on\n25-HMI  : Command completion confirmation is enabled\n\\r\\n\n25-HMI  : Command complete: cmdcomplete on\\r\\n\n"
+   },
+   {
+      "data" : "25-HMI  : >>> log set SNMP info\n25-HMI  : Logging level for category SNMP set to INFO (20)\\r\\n\n25-HMI  : >>> log set OPTIM info\\r\\n\n25-HMI  : Logging level for category OPTIM set to INFO (20)\n\\r\\n\n25-HMI  : >>> fileexport length 64\\r\\n\n25-BSDEV: FileExportLength set to 64\\r\\n\n25-OPTIM: Config file fractal-skd-cka complete!\\r\\n\n25-OPTIM: Optimus ready...\\r\\n\ncmdcomplete on\n25-HMI  : Command completion confirmation is enabled\n\\r\\n\n25-HMI  : Command complete: cmdcomplete on\\r\\n\n",
+      "date" : "13:50:37.801",
+      "to" : "OPTIMUS",
+      "type" : "msg",
+      "from" : "CONFIG_FILE",
+      "msg" : "log set SNMP info'",
+      "line" : 372
+   },
+   {
+      "msg" : "log set OPTIM info'",
+      "line" : 374,
+      "data" : "25-HMI  : >>> log set OPTIM info\n25-HMI  : Logging level for category OPTIM set to INFO (20)\n\\r\\n\n25-HMI  : >>> fileexport length 64\\r\\n\n25-BSDEV: FileExportLength set to 64\\r\\n\n25-OPTIM: Config file fractal-skd-cka complete!\\r\\n\n25-OPTIM: Optimus ready...\\r\\n\ncmdcomplete on\n25-HMI  : Command completion confirmation is enabled\n\\r\\n\n25-HMI  : Command complete: cmdcomplete on\\r\\n\n",
+      "date" : "13:50:37.801",
+      "to" : "OPTIMUS",
+      "type" : "msg",
+      "from" : "CONFIG_FILE"
+   },
+   {
+      "line" : 377,
+      "msg" : "fileexport length 64'",
+      "type" : "msg",
+      "from" : "CONFIG_FILE",
+      "data" : "25-HMI  : >>> fileexport length 64\n25-BSDEV: FileExportLength set to 64\\r\\n\n25-OPTIM: Config file fractal-skd-cka complete!\\r\\n\n25-OPTIM: Optimus ready...\\r\\n\ncmdcomplete on\n25-HMI  : Command completion confirmation is enabled\n\\r\\n\n25-HMI  : Command complete: cmdcomplete on\\r\\n\n",
+      "to" : "OPTIMUS",
+      "date" : "13:50:37.802"
+   },
+   {
+      "date" : "13:50:37.802",
+      "event" : "Config Load Complete",
+      "sev" : 5,
+      "type" : "ev",
+      "line" : 379,
+      "node" : "CONFIG_FILE"
+   },
+   {
+      "line" : 380,
+      "node" : "OPTIMUS",
+      "date" : "13:50:37.802",
+      "event" : "READY",
+      "sev" : 5,
+      "type" : "ev"
+   },
+   {
+      "line" : 381,
+      "msg" : "CLI: cmdcomplete on",
+      "from" : "FRACTAL",
+      "type" : "msg",
+      "to" : "OPTIMUS",
+      "date" : "13:50:37.807",
+      "data" : "cmdcomplete on\n25-HMI  : Command completion confirmation is enabled\n\\r\\n\n25-HMI  : Command complete: cmdcomplete on\\r\\n\n"
+   },
+   {
+      "data" : "snmp security 123456789 987654321\n25-SNMP : SNMP security mode set to authPriv\\r\\n\n25-SNMP :   authKey: 123456789\\r\\n\n25-SNMP :   privKey: 987654321\\r\\n\n25-HMI  : Command complete: snmp security 123456789 987654321\\r\\n\n",
+      "to" : "OPTIMUS",
+      "date" : "13:50:37.849",
+      "type" : "msg",
+      "from" : "FRACTAL",
+      "msg" : "CLI: snmp security 123456789 987654321",
+      "line" : 385
+   },
+   {
+      "tag" : "cka-request-mission-crl-req-period",
+      "sev" : 4,
+      "event" : "Test: cka-request-miss...",
+      "type" : "ev",
+      "node" : "FRACTAL",
+      "line" : 390,
+      "data" : "Test: cka-request-mission-crl-req-period",
+      "date" : "13:50:37.854"
+   },
+   {
+      "data" : "'30-SNMP : Received SNMP message with incorrect EngineID'",
+      "date" : "13:50:43.652",
+      "node" : "OPTIMUS",
+      "line" : 393,
+      "type" : "ev",
+      "sev" : 2,
+      "event" : " Received SNMP message with incorrect EngineID'",
+      "tag" : "cka-request-mission-crl-req-period"
+   },
+   {
+      "tag" : "cka-request-mission-crl-req-period",
+      "line" : 395,
+      "msg" : "Unknown report[unknown Engine IDs]",
+      "type" : "msg",
+      "from" : "OPTIMUS",
+      "date" : "13:50:43.653",
+      "to" : "MGMT"
+   },
+   {
+      "msg" : "ARP Request[ 128.10.1.1 ]",
+      "tag" : "cka-request-mission-crl-req-period",
+      "line" : 396,
+      "date" : "13:50:43.653",
+      "to" : "PT",
+      "type" : "msg",
+      "from" : "OPTIMUS"
+   },
+   {
+      "type" : "ev",
+      "sev" : 2,
+      "event" : " Unsuccessful ARP cache lookup for 128.10.1.1'",
+      "tag" : "cka-request-mission-crl-req-period",
+      "data" : "'30-ETHER: Unsuccessful ARP cache lookup for 128.10.1.1'",
+      "date" : "13:50:43.654",
+      "node" : "OPTIMUS",
+      "line" : 397
+   },
+   {
+      "from" : "PT",
+      "type" : "msg",
+      "date" : "13:50:43.654",
+      "to" : "OPTIMUS",
+      "line" : 398,
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "ARP reply[128.10.1.1]"
+   },
+   {
+      "line" : 401,
+      "date" : "13:50:43.790",
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-BSTBL: CHILD_SA Database Table:\n\\r\\n\n25-BSTBL:   +------+-----------+----+----------+----------+\\r\\n\n25-BSTBL:   |Index |IKE_SA SPI |SPI |Selectors |Algorithm |\\r\\n\n25-BSTBL:   +------+-----------+----+----------+----------+\\r\\n\n25-BSTBL:   +------+-----------+----+----------+----------+\\r\\n\n",
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "SNMP Table Read:  CHILD_SA Database Table",
+      "from" : "OPTIMUS",
+      "type" : "msg",
+      "to" : "MGMT"
+   },
+   {
+      "type" : "msg",
+      "from" : "OPTIMUS",
+      "to" : "MGMT",
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "SNMP Table Read:  SPD Rule Table",
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-BSTBL: SPD Rule Table:\\r\\n\n25-BSTBL:   +---+------------+----------+-------+-------+------+-------+-----------+----------+\n\\r\\n\n25-BSTBL:   |Pr |Description |Selectors |Action |Method |Xform |Idtype |PeerIdType |PeerIdVal |\\r\\n\n25-BSTBL:   +---+------------+----------+-------+-------+------+-------+-----------+----------+\\r\\n\n25-BSTBL:   +---+------------+----------+-------+-------+------+-------+-----------+----------+\n",
+      "date" : "13:50:43.832",
+      "line" : 408
+   },
+   {
+      "to" : "MGMT",
+      "from" : "OPTIMUS",
+      "type" : "msg",
+      "msg" : "SNMP Table Read:  SPD Local Traffic Selector Table",
+      "tag" : "cka-request-mission-crl-req-period",
+      "date" : "13:50:43.875",
+      "data" : "25-BSTBL: SNMP Table Read Start\n\\r\\n\n25-BSTBL: SPD Local Traffic Selector Table:\\r\\n\n25-BSTBL:   +-----+----+--------------+------------+----+------+------+----+----+\\r\\n\n25-BSTBL:   |Name |Idx |Start Address |End Address |Pro |Prt S |Prt E |DsS |DsE |\\r\\n\n25-BSTBL:   +-----+----+--------------+------------+----+------+------+----+----+\\r\\n\n25-BSTBL:   +-----+----+--------------+------------+----+------+------+----+----+\\r\\n\n",
+      "line" : 416
+   },
+   {
+      "line" : 423,
+      "date" : "13:50:43.916",
+      "data" : "25-BSTBL: SNMP Table Read Start\n\\r\\n\n25-BSTBL: SPD Remote Traffic Selector Table:\\r\\n\n25-BSTBL:   +-----+----+--------------+------------+----+------+------+\\r\\n\n25-BSTBL:   |Name |Idx |Start Address |End Address |Pro |Prt S |Prt E |\\r\\n\n25-BSTBL:   +-----+----+--------------+------------+----+------+------+\n\\r\\n\n25-BSTBL:   +-----+----+--------------+------------+----+------+------+\\r\\n\n",
+      "msg" : "SNMP Table Read:  SPD Remote Traffic Selector Table",
+      "tag" : "cka-request-mission-crl-req-period",
+      "to" : "MGMT",
+      "from" : "OPTIMUS",
+      "type" : "msg"
+   },
+   {
+      "from" : "OPTIMUS",
+      "type" : "msg",
+      "to" : "MGMT",
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "SNMP Table Read:  Pre-Placed Key Table",
+      "date" : "13:50:43.958",
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-KEYS : Pre-Placed Key Table:\\r\\n\n25-BSTBL:   +------------+---+----+------------+----------+\\r\\n\n25-BSTBL:   |Short Title |Ed |Seg |Description |Algorithm |\\r\\n\n25-BSTBL:   +------------+---+----+------------+----------+\\r\\n\n25-BSTBL:   +------------+---+----+------------+----------+\n",
+      "line" : 431
+   },
+   {
+      "to" : "MGMT",
+      "type" : "msg",
+      "from" : "OPTIMUS",
+      "msg" : "SNMP Table Read:  EE Certificate Table",
+      "tag" : "cka-request-mission-crl-req-period",
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-KEYS : EE Certificate Table:\\r\\n\n25-BSTBL:   +-------+---+-----------+-----+----------+--------+-----------+-----------+---------+\\r\\n\n25-BSTBL:   |CA Hash|Ser|Description|Class|Start Date|End Date|Auth Key Id|Subj Key Id|Algorithm|\\r\\n\n25-BSTBL:   +-------+---+-----------+-----+----------+--------+-----------+-----------+---------+\\r\\n\n25-BSTBL:   +-------+---+-----------+-----+----------+--------+-----------+-----------+---------+\n",
+      "date" : "13:50:44.003",
+      "line" : 438
+   },
+   {
+      "date" : "13:50:44.043",
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-KEYS : CA Certificate Table:\\r\\n\n25-BSTBL:   +-------+-----------+---+-----+----------+--------+-----------+-----------+---------+----+-------+\\r\\n\n25-BSTBL:   |CA Hash|Description|Ser|Class|Start Date|End Date|Auth Key Id|Subj Key Id|Algorithm|Type|CRL Rev|\\r\\n\n25-BSTBL:   +-------+-----------+---+-----+----------+--------+-----------+-----------+---------+----+-------+\\r\\n\n25-BSTBL:   +-------+-----------+---+-----+----------+--------+-----------+-----------+---------+----+-------+\\r\\n\n",
+      "line" : 445,
+      "from" : "OPTIMUS",
+      "type" : "msg",
+      "to" : "MGMT",
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "SNMP Table Read:  CA Certificate Table"
+   },
+   {
+      "line" : 451,
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-KEYS : Pre-Shared Key Table:\\r\\n\n25-BSTBL:   +------------+---+----+------------+----------+-----------+---------+\\r\\n\n25-BSTBL:   |Short Title |Ed |Seg |Description |Algorithm |Start Date |End Date |\\r\\n\n25-BSTBL:   +------------+---+----+------------+----------+-----------+---------+\n\\r\\n\n25-BSTBL:   +------------+---+----+------------+----------+-----------+---------+\\r\\n\n",
+      "date" : "13:50:44.097",
+      "msg" : "SNMP Table Read:  Pre-Shared Key Table",
+      "tag" : "cka-request-mission-crl-req-period",
+      "to" : "MGMT",
+      "type" : "msg",
+      "from" : "OPTIMUS"
+   },
+   {
+      "line" : 458,
+      "date" : "13:50:44.137",
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-KEYSC: CCOI Key Table:\\r\\n\n25-BSTBL:   +-------+---+------------+-----------+-----------+---------+\\r\\n\n25-BSTBL:   |Domain |Ed |Description |Public Key |Start Date |End Date |\\r\\n\n25-BSTBL:   +-------+---+------------+-----------+-----------+---------+\\r\\n\n25-BSTBL:   +-------+---+------------+-----------+-----------+---------+\n",
+      "msg" : "SNMP Table Read:  CCOI Key Table",
+      "tag" : "cka-request-mission-crl-req-period",
+      "to" : "MGMT",
+      "from" : "OPTIMUS",
+      "type" : "msg"
+   },
+   {
+      "type" : "msg",
+      "from" : "OPTIMUS",
+      "to" : "MGMT",
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "SNMP Table Read:  EE Certificate Table",
+      "data" : "25-BSTBL: SNMP Table Read Start\n\\r\\n\n25-KEYS : EE Certificate Table:\\r\\n\n25-BSTBL:   +-------+---+-----------+-----+----------+--------+-----------+-----------+---------+\n\\r\\n\n25-BSTBL:   |CA Hash|Ser|Description|Class|Start Date|End Date|Auth Key Id|Subj Key Id|Algorithm|\n\\r\\n\n25-BSTBL:   +-------+---+-----------+-----+----------+--------+-----------+-----------+---------+\\r\\n\n25-BSTBL:   +-------+---+-----------+-----+----------+--------+-----------+-----------+---------+\\r\\n\n",
+      "date" : "13:50:44.199",
+      "line" : 465
+   },
+   {
+      "date" : "13:50:44.241",
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-KEYS : Pre-Placed Key Table:\\r\\n\n25-BSTBL:   +------------+---+----+------------+----------+\\r\\n\n25-BSTBL:   |Short Title |Ed |Seg |Description |Algorithm |\\r\\n\n25-BSTBL:   +------------+---+----+------------+----------+\\r\\n\n25-BSTBL:   +------------+---+----+------------+----------+\\r\\n\n",
+      "line" : 474,
+      "from" : "OPTIMUS",
+      "type" : "msg",
+      "to" : "MGMT",
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "SNMP Table Read:  Pre-Placed Key Table"
+   },
+   {
+      "type" : "msg",
+      "from" : "OPTIMUS",
+      "to" : "MGMT",
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "SNMP Table Read:  Pre-Placed Key Chain Table",
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-KEYS : Pre-Placed Key Chain Table:\\r\\n\n25-BSTBL:   +-----------+-----------+------------+---+----+\\r\\n\n25-BSTBL:   |Chain Name |Start Date |Short Title |Ed |Seg |\\r\\n\n25-BSTBL:   +-----------+-----------+------------+---+----+\\r\\n\n25-BSTBL:   +-----------+-----------+------------+---+----+\n",
+      "date" : "13:50:44.282",
+      "line" : 480
+   },
+   {
+      "line" : 487,
+      "date" : "13:50:44.324",
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-BSTBL: PPK_SA Database Table:\n\\r\\n\n25-BSTBL:   +-----+-----------+---------+-----+----------+-----------+-----------+------------+------------+---+---------+-------+-----+-----+\\r\\n\n25-BSTBL:   |Index|Description|PPK chain|SPI-A|Start Date|Local CT IP|Local PT IP|Remote CT IP|Remote PT IP|Alg|Selectors|SAstart|SAend|state|\\r\\n\n25-BSTBL:   +-----+-----------+---------+-----+----------+-----------+-----------+------------+------------+---+---------+-------+-----+-----+\\r\\n\n25-BSTBL:   +-----+-----------+---------+-----+----------+-----------+-----------+------------+------------+---+---------+-------+-----+-----+\\r\\n\n",
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "SNMP Table Read:  PPK_SA Database Table",
+      "from" : "OPTIMUS",
+      "type" : "msg",
+      "to" : "MGMT"
+   },
+   {
+      "sev" : 2,
+      "event" : " Unknown object in set_request! (1.3.6.1.4.1.2157.4.3.4.6.0)'",
+      "type" : "ev",
+      "tag" : "cka-request-mission-crl-req-period",
+      "data" : "'30-SNMP : Unknown object in set_request! (1.3.6.1.4.1.2157.4.3.4.6.0)'",
+      "date" : "13:50:44.365",
+      "node" : "OPTIMUS",
+      "line" : 494
+   },
+   {
+      "type" : "ev",
+      "event" : " GET_RESPONSE[ ERROR NO_SUCH_NAME (11) in setRequest! (obj 1 - 1.3.6.1.4.1.2157.4.3.4.6.0 )]'",
+      "sev" : 2,
+      "tag" : "cka-request-mission-crl-req-period",
+      "date" : "13:50:44.366",
+      "data" : "'30-SNMP : Optimus -> MGMT: GET_RESPONSE[ ERROR NO_SUCH_NAME (11) in setRequest! (obj 1 - 1.3.6.1.4.1.2157.4.3.4.6.0 )]'",
+      "line" : 495,
+      "node" : "OPTIMUS"
+   },
+   {
+      "msg" : "SNMP Table Read:  Address Assignment Table",
+      "tag" : "cka-request-mission-crl-req-period",
+      "to" : "MGMT",
+      "type" : "msg",
+      "from" : "OPTIMUS",
+      "line" : 496,
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-BSTBL: Address Assignment Table:\\r\\n\n25-BSTBL:   +--------+-----------+-----+------+\\r\\n\n25-BSTBL:   |ID/Side |IP Address |Mask |CTmet |\\r\\n\n25-BSTBL:   +--------+-----------+-----+------+\\r\\n\n25-BSTBL:   |1 - PT  |128.10.1.2 |16   |0     |\\r\\n\n25-BSTBL:   +--------+-----------+-----+------+\n",
+      "date" : "13:50:44.406"
+   },
+   {
+      "msg" : "SNMP Table Read:  Address Assignment Table",
+      "tag" : "cka-request-mission-crl-req-period",
+      "to" : "MGMT",
+      "from" : "OPTIMUS",
+      "type" : "msg",
+      "line" : 504,
+      "date" : "13:50:44.492",
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-BSTBL: Address Assignment Table:\\r\\n\n25-BSTBL:   +--------+-----------+-----+------+\\r\\n\n25-BSTBL:   |ID/Side |IP Address |Mask |CTmet |\\r\\n\n25-BSTBL:   +--------+-----------+-----+------+\\r\\n\n25-BSTBL:   |1 - PT  |128.10.1.2 |16   |0     |\n\\r\\n\n25-BSTBL:   +--------+-----------+-----+------+\\r\\n\n"
+   },
+   {
+      "msg" : "SNMP Table Read:  Interfaces Table",
+      "tag" : "cka-request-mission-crl-req-period",
+      "to" : "MGMT",
+      "from" : "OPTIMUS",
+      "type" : "msg",
+      "line" : 512,
+      "date" : "13:50:44.711",
+      "data" : "25-BSTBL: SNMP Table Read Start\n\\r\\n\n25-BSTBL: Interfaces Table:\\r\\n\n25-BSTBL:   +------------------+--------+-------+-----+\n\\r\\n\n25-BSTBL:   |MAC Address       |ID/Side |Status |MTU  |\\r\\n\n25-BSTBL:   +------------------+--------+-------+-----+\\r\\n\n25-BSTBL:   |08:00:27:b2:4b:ec |1 - PT  |UP     |1500 |\\r\\n\n25-BSTBL:   |08:00:27:bd:58:1a |2 - CT  |UP     |1500 |\\r\\n\n25-BSTBL:   +------------------+--------+-------+-----+\\r\\n\n"
+   },
+   {
+      "to" : "MGMT",
+      "type" : "msg",
+      "from" : "OPTIMUS",
+      "msg" : "SNMP Table Read:  Interfaces Table",
+      "tag" : "cka-request-mission-crl-req-period",
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-BSTBL: Interfaces Table:\\r\\n\n25-BSTBL:   +------------------+--------+-------+-----+\\r\\n\n25-BSTBL:   |MAC Address       |ID/Side |Status |MTU  |\\r\\n\n25-BSTBL:   +------------------+--------+-------+-----+\\r\\n\n25-BSTBL:   |08:00:27:b2:4b:ec |1 - PT  |UP     |1500 |\n\\r\\n\n25-BSTBL:   |08:00:27:bd:58:1a |2 - CT  |UP     |1500 |\\r\\n\n25-BSTBL:   +------------------+--------+-------+-----+\\r\\n\n",
+      "date" : "13:50:44.798",
+      "line" : 522
+   },
+   {
+      "msg" : "SNMP Table Read:  Address Assignment Table",
+      "tag" : "cka-request-mission-crl-req-period",
+      "to" : "MGMT",
+      "type" : "msg",
+      "from" : "OPTIMUS",
+      "line" : 531,
+      "data" : "25-BSTBL: SNMP Table Read Start\n\\r\\n\n25-BSTBL: Address Assignment Table:\\r\\n\n25-BSTBL:   +--------+-----------+-----+------+\\r\\n\n25-BSTBL:   |ID/Side |IP Address |Mask |CTmet |\\r\\n\n25-BSTBL:   +--------+-----------+-----+------+\\r\\n\n25-BSTBL:   |1 - PT  |128.10.1.2 |16   |0     |\\r\\n\n25-BSTBL:   +--------+-----------+-----+------+\\r\\n\n",
+      "date" : "13:50:45.233"
+   },
+   {
+      "sev" : 2,
+      "event" : " Unknown object in set_request! (1.3.6.1.4.1.2157.4.7.5.2.0)'",
+      "type" : "ev",
+      "tag" : "cka-request-mission-crl-req-period",
+      "data" : "'30-SNMP : Unknown object in set_request! (1.3.6.1.4.1.2157.4.7.5.2.0)'",
+      "date" : "13:50:45.322",
+      "node" : "OPTIMUS",
+      "line" : 539
+   },
+   {
+      "tag" : "cka-request-mission-crl-req-period",
+      "event" : " GET_RESPONSE[ ERROR NO_SUCH_NAME (11) in setRequest! (obj 1 - 1.3.6.1.4.1.2157.4.7.5.2.0 )]'",
+      "sev" : 2,
+      "type" : "ev",
+      "line" : 540,
+      "node" : "OPTIMUS",
+      "date" : "13:50:45.323",
+      "data" : "'30-SNMP : Optimus -> MGMT: GET_RESPONSE[ ERROR NO_SUCH_NAME (11) in setRequest! (obj 1 - 1.3.6.1.4.1.2157.4.7.5.2.0 )]'"
+   },
+   {
+      "tag" : "cka-request-mission-crl-req-period",
+      "type" : "ev",
+      "event" : " Unhandled OID!! OID is 1.3.6.1.4.1.2157.4.7.3.1.0'",
+      "sev" : 2,
+      "line" : 541,
+      "node" : "OPTIMUS",
+      "date" : "13:50:45.361",
+      "data" : "'30-SNMP : Unhandled OID!! OID is 1.3.6.1.4.1.2157.4.7.3.1.0'"
+   },
+   {
+      "tag" : "cka-request-mission-crl-req-period",
+      "type" : "ev",
+      "event" : " GET_RESPONSE[ Error NO_SUCH_NAME (11) in getRequest! (obj 1 - 1.3.6.1.4.1.2157.4.7.3.1.0 )]'",
+      "sev" : 2,
+      "line" : 542,
+      "node" : "OPTIMUS",
+      "date" : "13:50:45.361",
+      "data" : "'30-SNMP : Optimus -> MGMT: GET_RESPONSE[ Error NO_SUCH_NAME (11) in getRequest! (obj 1 - 1.3.6.1.4.1.2157.4.7.3.1.0 )]'"
+   },
+   {
+      "tag" : "cka-request-mission-crl-req-period",
+      "type" : "ev",
+      "sev" : 2,
+      "event" : " Unhandled OID!! OID is 1.3.6.1.4.1.2157.4.7.3.4.0'",
+      "node" : "OPTIMUS",
+      "line" : 544,
+      "data" : "'30-SNMP : Unhandled OID!! OID is 1.3.6.1.4.1.2157.4.7.3.4.0'",
+      "date" : "13:50:45.406"
+   },
+   {
+      "tag" : "cka-request-mission-crl-req-period",
+      "type" : "ev",
+      "event" : " GET_RESPONSE[ Error NO_SUCH_NAME (11) in getRequest! (obj 1 - 1.3.6.1.4.1.2157.4.7.3.4.0 )]'",
+      "sev" : 2,
+      "line" : 545,
+      "node" : "OPTIMUS",
+      "date" : "13:50:45.407",
+      "data" : "'30-SNMP : Optimus -> MGMT: GET_RESPONSE[ Error NO_SUCH_NAME (11) in getRequest! (obj 1 - 1.3.6.1.4.1.2157.4.7.3.4.0 )]'"
+   },
+   {
+      "date" : "13:50:45.454",
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-BSTBL: SPD Local Traffic Selector Table:\\r\\n\n25-BSTBL:   +-----+----+--------------+------------+----+------+------+----+----+\\r\\n\n25-BSTBL:   |Name |Idx |Start Address |End Address |Pro |Prt S |Prt E |DsS |DsE |\\r\\n\n25-BSTBL:   +-----+----+--------------+------------+----+------+------+----+----+\\r\\n\n25-BSTBL:   +-----+----+--------------+------------+----+------+------+----+----+\\r\\n\n",
+      "line" : 546,
+      "to" : "MGMT",
+      "from" : "OPTIMUS",
+      "type" : "msg",
+      "msg" : "SNMP Table Read:  SPD Local Traffic Selector Table",
+      "tag" : "cka-request-mission-crl-req-period"
+   },
+   {
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-BSTBL: SPD Remote Traffic Selector Table:\\r\\n\n25-BSTBL:   +-----+----+--------------+------------+----+------+------+\\r\\n\n25-BSTBL:   |Name |Idx |Start Address |End Address |Pro |Prt S |Prt E |\\r\\n\n25-BSTBL:   +-----+----+--------------+------------+----+------+------+\\r\\n\n25-BSTBL:   +-----+----+--------------+------------+----+------+------+\\r\\n\n",
+      "date" : "13:50:45.494",
+      "line" : 552,
+      "type" : "msg",
+      "from" : "OPTIMUS",
+      "to" : "MGMT",
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "SNMP Table Read:  SPD Remote Traffic Selector Table"
+   },
+   {
+      "line" : 558,
+      "date" : "13:50:45.536",
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-BSTBL: SPD Rule Table:\\r\\n\n25-BSTBL:   +---+------------+----------+-------+-------+------+-------+-----------+----------+\\r\\n\n25-BSTBL:   |Pr |Description |Selectors |Action |Method |Xform |Idtype |PeerIdType |PeerIdVal |\\r\\n\n25-BSTBL:   +---+------------+----------+-------+-------+------+-------+-----------+----------+\n\\r\\n\n25-BSTBL:   +---+------------+----------+-------+-------+------+-------+-----------+----------+\\r\\n\n",
+      "msg" : "SNMP Table Read:  SPD Rule Table",
+      "tag" : "cka-request-mission-crl-req-period",
+      "to" : "MGMT",
+      "from" : "OPTIMUS",
+      "type" : "msg"
+   },
+   {
+      "line" : 565,
+      "data" : "ike cookie off\n25-IKEV2: Cookie mode is currently disabled\\r\\n\n25-HMI  : Command complete: ike cookie off\\r\\n\n",
+      "date" : "13:50:45.563",
+      "msg" : "CLI: ike cookie off",
+      "tag" : "cka-request-mission-crl-req-period",
+      "to" : "OPTIMUS",
+      "type" : "msg",
+      "from" : "FRACTAL"
+   },
+   {
+      "type" : "msg",
+      "from" : "FRACTAL",
+      "to" : "OPTIMUS",
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "CLI: ike rekey timeout 86400",
+      "data" : "ike rekey timeout 86400\n25-IKEV2: IKE rekey is enabled\\r\\n\n25-IKEV2: IKE rekey period set to 86400 seconds\\r\\n\n25-HMI  : Command complete: ike rekey timeout 86400\\r\\n\n",
+      "date" : "13:50:45.564",
+      "line" : 568
+   },
+   {
+      "node" : "OPTIMUS",
+      "line" : 572,
+      "data" : "'30-SNMP : Unhandled OID!! OID is 1.3.6.1.4.1.2157.4.5.5.1.0'",
+      "date" : "13:50:45.577",
+      "tag" : "cka-request-mission-crl-req-period",
+      "type" : "ev",
+      "sev" : 2,
+      "event" : " Unhandled OID!! OID is 1.3.6.1.4.1.2157.4.5.5.1.0'"
+   },
+   {
+      "date" : "13:50:45.578",
+      "data" : "'30-SNMP : Optimus -> MGMT: GET_RESPONSE[ Error NO_SUCH_NAME (11) in getRequest! (obj 1 - 1.3.6.1.4.1.2157.4.5.5.1.0 )]'",
+      "line" : 573,
+      "node" : "OPTIMUS",
+      "event" : " GET_RESPONSE[ Error NO_SUCH_NAME (11) in getRequest! (obj 1 - 1.3.6.1.4.1.2157.4.5.5.1.0 )]'",
+      "sev" : 2,
+      "type" : "ev",
+      "tag" : "cka-request-mission-crl-req-period"
+   },
+   {
+      "tag" : "cka-request-mission-crl-req-period",
+      "event" : " Unknown object in set_request! (1.3.6.1.4.1.2157.4.5.5.5.0)'",
+      "sev" : 2,
+      "type" : "ev",
+      "line" : 574,
+      "node" : "OPTIMUS",
+      "date" : "13:50:45.618",
+      "data" : "'30-SNMP : Unknown object in set_request! (1.3.6.1.4.1.2157.4.5.5.5.0)'"
+   },
+   {
+      "date" : "13:50:45.619",
+      "data" : "'30-SNMP : Optimus -> MGMT: GET_RESPONSE[ ERROR NO_SUCH_NAME (11) in setRequest! (obj 1 - 1.3.6.1.4.1.2157.4.5.5.5.0 )]'",
+      "line" : 576,
+      "node" : "OPTIMUS",
+      "event" : " GET_RESPONSE[ ERROR NO_SUCH_NAME (11) in setRequest! (obj 1 - 1.3.6.1.4.1.2157.4.5.5.5.0 )]'",
+      "sev" : 2,
+      "type" : "ev",
+      "tag" : "cka-request-mission-crl-req-period"
+   },
+   {
+      "line" : 577,
+      "node" : "OPTIMUS",
+      "date" : "13:50:45.661",
+      "data" : "'30-SNMP : Unhandled OID!! OID is 1.3.6.1.4.1.2157.4.7.4.2.0'",
+      "tag" : "cka-request-mission-crl-req-period",
+      "event" : " Unhandled OID!! OID is 1.3.6.1.4.1.2157.4.7.4.2.0'",
+      "sev" : 2,
+      "type" : "ev"
+   },
+   {
+      "data" : "'30-SNMP : Optimus -> MGMT: GET_RESPONSE[ Error NO_SUCH_NAME (11) in getRequest! (obj 1 - 1.3.6.1.4.1.2157.4.7.4.2.0 )]'",
+      "date" : "13:50:45.661",
+      "node" : "OPTIMUS",
+      "line" : 578,
+      "type" : "ev",
+      "sev" : 2,
+      "event" : " GET_RESPONSE[ Error NO_SUCH_NAME (11) in getRequest! (obj 1 - 1.3.6.1.4.1.2157.4.7.4.2.0 )]'",
+      "tag" : "cka-request-mission-crl-req-period"
+   },
+   {
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "SNMP Table Read:  Interfaces Table",
+      "from" : "OPTIMUS",
+      "type" : "msg",
+      "to" : "MGMT",
+      "line" : 579,
+      "date" : "13:50:45.702",
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-BSTBL: Interfaces Table:\\r\\n\n25-BSTBL:   +------------------+--------+-------+-----+\\r\\n\n25-BSTBL:   |MAC Address       |ID/Side |Status |MTU  |\n\\r\\n\n25-BSTBL:   +------------------+--------+-------+-----+\\r\\n\n25-BSTBL:   |08:00:27:b2:4b:ec |1 - PT  |UP     |1500 |\n\\r\\n\n25-BSTBL:   |08:00:27:bd:58:1a |2 - CT  |UP     |1500 |\\r\\n\n25-BSTBL:   +------------------+--------+-------+-----+\\r\\n\n"
+   },
+   {
+      "date" : "13:50:45.789",
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-BSTBL: Interfaces Table:\\r\\n\n25-BSTBL:   +------------------+--------+-------+-----+\\r\\n\n25-BSTBL:   |MAC Address       |ID/Side |Status |MTU  |\\r\\n\n25-BSTBL:   +------------------+--------+-------+-----+\\r\\n\n25-BSTBL:   |08:00:27:b2:4b:ec |1 - PT  |UP     |1500 |\n\\r\\n\n25-BSTBL:   |08:00:27:bd:58:1a |2 - CT  |UP     |1500 |\\r\\n\n25-BSTBL:   +------------------+--------+-------+-----+\\r\\n\n",
+      "line" : 589,
+      "to" : "MGMT",
+      "from" : "OPTIMUS",
+      "type" : "msg",
+      "msg" : "SNMP Table Read:  Interfaces Table",
+      "tag" : "cka-request-mission-crl-req-period"
+   },
+   {
+      "to" : "MGMT",
+      "from" : "OPTIMUS",
+      "type" : "msg",
+      "msg" : "SNMP Table Read:  Address Assignment Table",
+      "tag" : "cka-request-mission-crl-req-period",
+      "date" : "13:50:46.235",
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-BSTBL: Address Assignment Table:\\r\\n\n25-BSTBL:   +--------+-----------+-----+------+\\r\\n\n25-BSTBL:   |ID/Side |IP Address |Mask |CTmet |\\r\\n\n25-BSTBL:   +--------+-----------+-----+------+\\r\\n\n25-BSTBL:   |1 - PT  |128.10.1.2 |16   |0     |\n\\r\\n\n25-BSTBL:   +--------+-----------+-----+------+\\r\\n\n",
+      "line" : 598
+   },
+   {
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-BSTBL: Static Routes Table:\\r\\n\n25-BSTBL:   +--------+-----------+-----+-----------+\\r\\n\n25-BSTBL:   |ID/Side |IP Address |Mask |Next Hop   |\\r\\n\n25-BSTBL:   +--------+-----------+-----+-----------+\n\\r\\n\n25-BSTBL:   |1 - PT  |0.0.0.0    |0    |128.10.1.1 |\\r\\n\n25-BSTBL:   +--------+-----------+-----+-----------+\n",
+      "date" : "13:50:46.312",
+      "line" : 606,
+      "to" : "MGMT",
+      "type" : "msg",
+      "from" : "OPTIMUS",
+      "msg" : "SNMP Table Read:  Static Routes Table",
+      "tag" : "cka-request-mission-crl-req-period"
+   },
+   {
+      "date" : "13:50:46.394",
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-BSTBL: Static Routes Table:\\r\\n\n25-BSTBL:   +--------+-----------+-----+-----------+\\r\\n\n25-BSTBL:   |ID/Side |IP Address |Mask |Next Hop   |\\r\\n\n25-BSTBL:   +--------+-----------+-----+-----------+\\r\\n\n25-BSTBL:   |1 - PT  |0.0.0.0    |0    |128.10.1.1 |\\r\\n\n25-BSTBL:   +--------+-----------+-----+-----------+\n",
+      "line" : 615,
+      "from" : "OPTIMUS",
+      "type" : "msg",
+      "to" : "MGMT",
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "SNMP Table Read:  Static Routes Table"
+   },
+   {
+      "msg" : "SNMP Table Read:  Local Topology Table",
+      "tag" : "cka-request-mission-crl-req-period",
+      "to" : "MGMT",
+      "type" : "msg",
+      "from" : "OPTIMUS",
+      "line" : 623,
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-BSTBL: Local Topology Table:\\r\\n\n25-BSTBL:   +-----------+-----+------+---------+------+------+\n\\r\\n\n25-BSTBL:   |PT Subnet  |Mask |PTmet |Validity |SInfo |oInfo |\\r\\n\n25-BSTBL:   +-----------+-----+------+---------+------+------+\\r\\n\n25-BSTBL:   |128.10.1.0 |27   |1     |Static   |2     |0     |\\r\\n\n25-BSTBL:   +-----------+-----+------+---------+------+------+\\r\\n\n",
+      "date" : "13:50:46.628"
+   },
+   {
+      "line" : 631,
+      "date" : "13:50:46.755",
+      "data" : "25-BSTBL: SNMP Table Read Start\n\\r\\n\n25-BSTBL: Local Topology Table:\\r\\n\n25-BSTBL:   +-----------+-----+------+---------+------+------+\n\\r\\n\n25-BSTBL:   |PT Subnet  |Mask |PTmet |Validity |SInfo |oInfo |\\r\\n\n25-BSTBL:   +-----------+-----+------+---------+------+------+\\r\\n\n25-BSTBL:   |128.10.1.0 |27   |1     |Static   |2     |0     |\\r\\n\n25-BSTBL:   +-----------+-----+------+---------+------+------+\\r\\n\n",
+      "msg" : "SNMP Table Read:  Local Topology Table",
+      "tag" : "cka-request-mission-crl-req-period",
+      "to" : "MGMT",
+      "from" : "OPTIMUS",
+      "type" : "msg"
+   },
+   {
+      "data" : "25-BSTBL: SNMP Table Read Start\n\\r\\n\n25-BSTBL: Local Topology Table:\\r\\n\n25-BSTBL:   +-----------+-----+------+---------+------+------+\\r\\n\n25-BSTBL:   |PT Subnet  |Mask |PTmet |Validity |SInfo |oInfo |\\r\\n\n25-BSTBL:   +-----------+-----+------+---------+------+------+\\r\\n\n25-BSTBL:   |128.10.1.0 |27   |1     |Static   |2     |0     |\\r\\n\n25-BSTBL:   +-----------+-----+------+---------+------+------+\\r\\n\n",
+      "date" : "13:50:46.839",
+      "line" : 640,
+      "type" : "msg",
+      "from" : "OPTIMUS",
+      "to" : "MGMT",
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "SNMP Table Read:  Local Topology Table"
+   },
+   {
+      "line" : 648,
+      "date" : "13:50:47.061",
+      "data" : "25-BSTBL: SNMP Table Read Start\n\\r\\n\n25-BSTBL: Peer Topology Table:\\r\\n\n25-BSTBL:   +---------+----+-------------+-------------+------+--------+-----+----+-----+--------+-----+\\r\\n\n25-BSTBL:   |PT Subnet|Mask|CT IP Address|PT IP Address|IdType|ID Value|PTmet|Meth|CTmet|Validity|SInfo|\\r\\n\n25-BSTBL:   +---------+----+-------------+-------------+------+--------+-----+----+-----+--------+-----+\\r\\n\n25-BSTBL:   +---------+----+-------------+-------------+------+--------+-----+----+-----+--------+-----+\\r\\n\n",
+      "msg" : "SNMP Table Read:  Peer Topology Table",
+      "tag" : "cka-request-mission-crl-req-period",
+      "to" : "MGMT",
+      "from" : "OPTIMUS",
+      "type" : "msg"
+   },
+   {
+      "line" : 658,
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-BSTBL: Peer Topology Table:\\r\\n\n25-BSTBL:   +---------+----+-------------+-------------+------+--------+-----+----+-----+--------+-----+\\r\\n\n25-BSTBL:   |PT Subnet|Mask|CT IP Address|PT IP Address|IdType|ID Value|PTmet|Meth|CTmet|Validity|SInfo|\\r\\n\n25-BSTBL:   +---------+----+-------------+-------------+------+--------+-----+----+-----+--------+-----+\\r\\n\n25-BSTBL:   +---------+----+-------------+-------------+------+--------+-----+----+-----+--------+-----+\\r\\n\n",
+      "date" : "13:50:47.190",
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "SNMP Table Read:  Peer Topology Table",
+      "type" : "msg",
+      "from" : "OPTIMUS",
+      "to" : "MGMT"
+   },
+   {
+      "date" : "13:50:47.233",
+      "data" : "25-BSTBL: SNMP Table Read Start\n\\r\\n\n25-BSTBL: Interfaces Table:\\r\\n\n25-BSTBL:   +------------------+--------+-------+-----+\\r\\n\n25-BSTBL:   |MAC Address       |ID/Side |Status |MTU  |\\r\\n\n25-BSTBL:   +------------------+--------+-------+-----+\n\\r\\n\n25-BSTBL:   |08:00:27:b2:4b:ec |1 - PT  |UP     |1500 |\\r\\n\n25-BSTBL:   |08:00:27:bd:58:1a |2 - CT  |UP     |1500 |\\r\\n\n25-BSTBL:   +------------------+--------+-------+-----+\\r\\n\n",
+      "line" : 666,
+      "to" : "MGMT",
+      "from" : "OPTIMUS",
+      "type" : "msg",
+      "msg" : "SNMP Table Read:  Interfaces Table",
+      "tag" : "cka-request-mission-crl-req-period"
+   },
+   {
+      "to" : "MGMT",
+      "type" : "msg",
+      "from" : "OPTIMUS",
+      "msg" : "SNMP Table Read:  Interfaces Table",
+      "tag" : "cka-request-mission-crl-req-period",
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-BSTBL: Interfaces Table:\\r\\n\n25-BSTBL:   +------------------+--------+-------+-----+\n\\r\\n\n25-BSTBL:   |MAC Address       |ID/Side |Status |MTU  |\\r\\n\n25-BSTBL:   +------------------+--------+-------+-----+\\r\\n\n25-BSTBL:   |08:00:27:b2:4b:ec |1 - PT  |UP     |1500 |\\r\\n\n25-BSTBL:   |08:00:27:bd:58:1a |2 - CT  |UP     |1500 |\\r\\n\n25-BSTBL:   +------------------+--------+-------+-----+\n",
+      "date" : "13:50:47.313",
+      "line" : 684
+   },
+   {
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "SNMP Table Read:  Address Assignment Table",
+      "from" : "OPTIMUS",
+      "type" : "msg",
+      "to" : "MGMT",
+      "line" : 738,
+      "date" : "13:50:47.761",
+      "data" : "25-BSTBL: SNMP Table Read Start\n\\r\\n\n25-BSTBL: Address Assignment Table:\\r\\n\n25-BSTBL:   +--------+-----------+-----+------+\n\\r\\n\n25-BSTBL:   |ID/Side |IP Address |Mask |CTmet |\\r\\n\n25-BSTBL:   +--------+-----------+-----+------+\\r\\n\n25-BSTBL:   |1 - PT  |128.10.1.2 |16   |0     |\\r\\n\n25-BSTBL:   +--------+-----------+-----+------+\\r\\n\n"
+   },
+   {
+      "line" : 753,
+      "data" : "25-BSTBL: SNMP Table Read Start\n\\r\\n\n25-BSTBL: Interfaces Table:\\r\\n\n25-BSTBL:   +------------------+--------+-------+-----+\\r\\n\n25-BSTBL:   |MAC Address       |ID/Side |Status |MTU  |\\r\\n\n25-BSTBL:   +------------------+--------+-------+-----+\\r\\n\n25-BSTBL:   |08:00:27:b2:4b:ec |1 - PT  |UP     |1500 |\\r\\n\n25-BSTBL:   |08:00:27:bd:58:1a |2 - CT  |UP     |1500 |\n\\r\\n\n25-BSTBL:   +------------------+--------+-------+-----+\\r\\n\n",
+      "date" : "13:50:47.845",
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "SNMP Table Read:  Interfaces Table",
+      "type" : "msg",
+      "from" : "OPTIMUS",
+      "to" : "MGMT"
+   },
+   {
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-BSTBL: Interfaces Table:\\r\\n\n25-BSTBL:   +------------------+--------+-------+-----+\\r\\n\n25-BSTBL:   |MAC Address       |ID/Side |Status |MTU  |\n\\r\\n\n25-BSTBL:   +------------------+--------+-------+-----+\\r\\n\n25-BSTBL:   |08:00:27:b2:4b:ec |1 - PT  |UP     |1500 |\\r\\n\n25-BSTBL:   |08:00:27:bd:58:1a |2 - CT  |UP     |1500 |\\r\\n\n25-BSTBL:   +------------------+--------+-------+-----+\\r\\n\n",
+      "date" : "13:50:47.927",
+      "line" : 767,
+      "type" : "msg",
+      "from" : "OPTIMUS",
+      "to" : "MGMT",
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "SNMP Table Read:  Interfaces Table"
+   },
+   {
+      "data" : "25-BSTBL: SNMP Table Read Start\n\\r\\n\n25-BSTBL: Address Assignment Table:\\r\\n\n25-BSTBL:   +--------+-----------+-----+------+\\r\\n\n25-BSTBL:   |ID/Side |IP Address |Mask |CTmet |\\r\\n\n25-BSTBL:   +--------+-----------+-----+------+\\r\\n\n25-BSTBL:   |1 - PT  |128.10.1.2 |16   |0     |\\r\\n\n25-BSTBL:   +--------+-----------+-----+------+\\r\\n\n",
+      "date" : "13:50:48.373",
+      "line" : 815,
+      "to" : "MGMT",
+      "type" : "msg",
+      "from" : "OPTIMUS",
+      "msg" : "SNMP Table Read:  Address Assignment Table",
+      "tag" : "cka-request-mission-crl-req-period"
+   },
+   {
+      "sev" : 2,
+      "event" : " Unhandled OID!! OID is 1.3.6.1.4.1.2157.4.2.2.7.0'",
+      "type" : "ev",
+      "tag" : "cka-request-mission-crl-req-period",
+      "data" : "'30-SNMP : Unhandled OID!! OID is 1.3.6.1.4.1.2157.4.2.2.7.0'",
+      "date" : "13:50:48.460",
+      "node" : "OPTIMUS",
+      "line" : 828
+   },
+   {
+      "date" : "13:50:48.460",
+      "data" : "'30-SNMP : Optimus -> MGMT: GET_RESPONSE[ Error NO_SUCH_NAME (11) in getRequest! (obj 1 - 1.3.6.1.4.1.2157.4.2.2.7.0 )]'",
+      "line" : 829,
+      "node" : "OPTIMUS",
+      "event" : " GET_RESPONSE[ Error NO_SUCH_NAME (11) in getRequest! (obj 1 - 1.3.6.1.4.1.2157.4.2.2.7.0 )]'",
+      "sev" : 2,
+      "type" : "ev",
+      "tag" : "cka-request-mission-crl-req-period"
+   },
+   {
+      "date" : "13:50:48.500",
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-BSTBL: PTS Server Table:\\r\\n\n25-BSTBL:   +--------------+--------------+-----+\\r\\n\n25-BSTBL:   |CT IP Address |PT IP Address |Port |\\r\\n\n25-BSTBL:   +--------------+--------------+-----+\\r\\n\n25-BSTBL:   +--------------+--------------+-----+\\r\\n\n",
+      "line" : 832,
+      "from" : "OPTIMUS",
+      "type" : "msg",
+      "to" : "MGMT",
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "SNMP Table Read:  PTS Server Table"
+   },
+   {
+      "line" : 850,
+      "node" : "OPTIMUS",
+      "date" : "13:50:48.664",
+      "data" : "'30-SNMP : Unknown object in set_request! (1.3.6.1.4.1.2157.4.7.6.1.0)'",
+      "tag" : "cka-request-mission-crl-req-period",
+      "type" : "ev",
+      "event" : " Unknown object in set_request! (1.3.6.1.4.1.2157.4.7.6.1.0)'",
+      "sev" : 2
+   },
+   {
+      "data" : "'30-SNMP : Optimus -> MGMT: GET_RESPONSE[ ERROR NO_SUCH_NAME (11) in setRequest! (obj 1 - 1.3.6.1.4.1.2157.4.7.6.1.0 )]'",
+      "date" : "13:50:48.665",
+      "node" : "OPTIMUS",
+      "line" : 852,
+      "type" : "ev",
+      "sev" : 2,
+      "event" : " GET_RESPONSE[ ERROR NO_SUCH_NAME (11) in setRequest! (obj 1 - 1.3.6.1.4.1.2157.4.7.6.1.0 )]'",
+      "tag" : "cka-request-mission-crl-req-period"
+   },
+   {
+      "line" : 854,
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "ARP request[128.10.1.2]",
+      "from" : "PT",
+      "type" : "msg",
+      "date" : "13:50:48.691",
+      "to" : "OPTIMUS"
+   },
+   {
+      "node" : "OPTIMUS",
+      "line" : 857,
+      "data" : "'30-SNMP : Unknown object in set_request! (1.3.6.1.4.1.2157.4.7.6.2.0)'",
+      "date" : "13:50:48.705",
+      "tag" : "cka-request-mission-crl-req-period",
+      "sev" : 2,
+      "event" : " Unknown object in set_request! (1.3.6.1.4.1.2157.4.7.6.2.0)'",
+      "type" : "ev"
+   },
+   {
+      "tag" : "cka-request-mission-crl-req-period",
+      "type" : "ev",
+      "sev" : 2,
+      "event" : " GET_RESPONSE[ ERROR NO_SUCH_NAME (11) in setRequest! (obj 1 - 1.3.6.1.4.1.2157.4.7.6.2.0 )]'",
+      "node" : "OPTIMUS",
+      "line" : 859,
+      "data" : "'30-SNMP : Optimus -> MGMT: GET_RESPONSE[ ERROR NO_SUCH_NAME (11) in setRequest! (obj 1 - 1.3.6.1.4.1.2157.4.7.6.2.0 )]'",
+      "date" : "13:50:48.707"
+   },
+   {
+      "tag" : "cka-request-mission-crl-req-period",
+      "type" : "ev",
+      "sev" : 2,
+      "event" : " Unknown object in set_request! (1.3.6.1.4.1.2157.4.3.4.3.0)'",
+      "node" : "OPTIMUS",
+      "line" : 863,
+      "data" : "'30-SNMP : Unknown object in set_request! (1.3.6.1.4.1.2157.4.3.4.3.0)'",
+      "date" : "13:50:48.747"
+   },
+   {
+      "type" : "ev",
+      "event" : " GET_RESPONSE[ ERROR NO_SUCH_NAME (11) in setRequest! (obj 1 - 1.3.6.1.4.1.2157.4.3.4.3.0 )]'",
+      "sev" : 2,
+      "tag" : "cka-request-mission-crl-req-period",
+      "date" : "13:50:48.748",
+      "data" : "'30-SNMP : Optimus -> MGMT: GET_RESPONSE[ ERROR NO_SUCH_NAME (11) in setRequest! (obj 1 - 1.3.6.1.4.1.2157.4.3.4.3.0 )]'",
+      "line" : 865,
+      "node" : "OPTIMUS"
+   },
+   {
+      "type" : "ev",
+      "event" : " Unknown object in set_request! (1.3.6.1.4.1.2157.4.3.4.4.0)'",
+      "sev" : 2,
+      "tag" : "cka-request-mission-crl-req-period",
+      "date" : "13:50:48.790",
+      "data" : "'30-SNMP : Unknown object in set_request! (1.3.6.1.4.1.2157.4.3.4.4.0)'",
+      "line" : 869,
+      "node" : "OPTIMUS"
+   },
+   {
+      "date" : "13:50:48.791",
+      "data" : "'30-SNMP : Optimus -> MGMT: GET_RESPONSE[ ERROR NO_SUCH_NAME (11) in setRequest! (obj 1 - 1.3.6.1.4.1.2157.4.3.4.4.0 )]'",
+      "line" : 871,
+      "node" : "OPTIMUS",
+      "event" : " GET_RESPONSE[ ERROR NO_SUCH_NAME (11) in setRequest! (obj 1 - 1.3.6.1.4.1.2157.4.3.4.4.0 )]'",
+      "sev" : 2,
+      "type" : "ev",
+      "tag" : "cka-request-mission-crl-req-period"
+   },
+   {
+      "data" : "'30-SNMP : Unhandled OID!! OID is 1.3.6.1.4.1.2157.4.7.2.3.1.0'",
+      "date" : "13:50:48.833",
+      "node" : "OPTIMUS",
+      "line" : 874,
+      "type" : "ev",
+      "sev" : 2,
+      "event" : " Unhandled OID!! OID is 1.3.6.1.4.1.2157.4.7.2.3.1.0'",
+      "tag" : "cka-request-mission-crl-req-period"
+   },
+   {
+      "date" : "13:50:48.833",
+      "data" : "'30-SNMP : Optimus -> MGMT: GET_RESPONSE[ Error NO_SUCH_NAME (11) in getRequest! (obj 1 - 1.3.6.1.4.1.2157.4.7.2.3.1.0 )]'",
+      "line" : 875,
+      "node" : "OPTIMUS",
+      "type" : "ev",
+      "event" : " GET_RESPONSE[ Error NO_SUCH_NAME (11) in getRequest! (obj 1 - 1.3.6.1.4.1.2157.4.7.2.3.1.0 )]'",
+      "sev" : 2,
+      "tag" : "cka-request-mission-crl-req-period"
+   },
+   {
+      "to" : "MGMT",
+      "type" : "msg",
+      "from" : "OPTIMUS",
+      "msg" : "SNMP Table Read:  Interfaces Table",
+      "tag" : "cka-request-mission-crl-req-period",
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-BSTBL: Interfaces Table:\\r\\n\n25-BSTBL:   +------------------+--------+-------+-----+\\r\\n\n25-BSTBL:   |MAC Address       |ID/Side |Status |MTU  |\\r\\n\n25-BSTBL:   +------------------+--------+-------+-----+\\r\\n\n25-BSTBL:   |08:00:27:b2:4b:ec |1 - PT  |UP     |1500 |\n\\r\\n\n25-BSTBL:   |08:00:27:bd:58:1a |2 - CT  |UP     |1500 |\\r\\n\n25-BSTBL:   +------------------+--------+-------+-----+\\r\\n\n",
+      "date" : "13:50:48.876",
+      "line" : 880
+   },
+   {
+      "from" : "OPTIMUS",
+      "type" : "msg",
+      "to" : "MGMT",
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "SNMP Table Read:  Interfaces Table",
+      "date" : "13:50:48.956",
+      "data" : "25-BSTBL: SNMP Table Read Start\n\\r\\n\n25-BSTBL: Interfaces Table:\\r\\n\n25-BSTBL:   +------------------+--------+-------+-----+\\r\\n\n25-BSTBL:   |MAC Address       |ID/Side |Status |MTU  |\\r\\n\n25-BSTBL:   +------------------+--------+-------+-----+\\r\\n\n25-BSTBL:   |08:00:27:b2:4b:ec |1 - PT  |UP     |1500 |\\r\\n\n25-BSTBL:   |08:00:27:bd:58:1a |2 - CT  |UP     |1500 |\\r\\n\n25-BSTBL:   +------------------+--------+-------+-----+\\r\\n\n",
+      "line" : 894
+   },
+   {
+      "msg" : "SNMP Table Read:  Address Assignment Table",
+      "tag" : "cka-request-mission-crl-req-period",
+      "to" : "MGMT",
+      "type" : "msg",
+      "from" : "OPTIMUS",
+      "line" : 939,
+      "data" : "25-BSTBL: SNMP Table Read Start\n\\r\\n\n25-BSTBL: Address Assignment Table:\\r\\n\n25-BSTBL:   +--------+-----------+-----+------+\n\\r\\n\n25-BSTBL:   |ID/Side |IP Address |Mask |CTmet |\\r\\n\n25-BSTBL:   +--------+-----------+-----+------+\\r\\n\n25-BSTBL:   |1 - PT  |128.10.1.2 |16   |0     |\\r\\n\n25-BSTBL:   +--------+-----------+-----+------+\\r\\n\n",
+      "date" : "13:50:49.435"
+   },
+   {
+      "date" : "13:50:49.517",
+      "data" : "'30-SNMP : Optimus -> MGMT: GET_RESPONSE[ ERROR NO_SUCH_NAME (11) in setRequest! (obj 1 - interfaceTable.8.2 )]'",
+      "line" : 953,
+      "node" : "OPTIMUS",
+      "event" : " GET_RESPONSE[ ERROR NO_SUCH_NAME (11) in setRequest! (obj 1 - interfaceTable.8.2 )]'",
+      "sev" : 2,
+      "type" : "ev",
+      "tag" : "cka-request-mission-crl-req-period"
+   },
+   {
+      "type" : "ev",
+      "sev" : 2,
+      "event" : " GET_RESPONSE[ ERROR NO_SUCH_NAME (11) in setRequest! (obj 1 - interfaceTable.9.2 )]'",
+      "tag" : "cka-request-mission-crl-req-period",
+      "data" : "'30-SNMP : Optimus -> MGMT: GET_RESPONSE[ ERROR NO_SUCH_NAME (11) in setRequest! (obj 1 - interfaceTable.9.2 )]'",
+      "date" : "13:50:49.560",
+      "node" : "OPTIMUS",
+      "line" : 957
+   },
+   {
+      "tag" : "cka-request-mission-crl-req-period",
+      "event" : " Unknown object in set_request! (1.3.6.1.4.1.2157.4.7.10.1.0)'",
+      "sev" : 2,
+      "type" : "ev",
+      "line" : 962,
+      "node" : "OPTIMUS",
+      "date" : "13:50:49.602",
+      "data" : "'30-SNMP : Unknown object in set_request! (1.3.6.1.4.1.2157.4.7.10.1.0)'"
+   },
+   {
+      "type" : "ev",
+      "sev" : 2,
+      "event" : " GET_RESPONSE[ ERROR NO_SUCH_NAME (11) in setRequest! (obj 1 - 1.3.6.1.4.1.2157.4.7.10.1.0 )]'",
+      "tag" : "cka-request-mission-crl-req-period",
+      "data" : "'30-SNMP : Optimus -> MGMT: GET_RESPONSE[ ERROR NO_SUCH_NAME (11) in setRequest! (obj 1 - 1.3.6.1.4.1.2157.4.7.10.1.0 )]'",
+      "date" : "13:50:49.602",
+      "node" : "OPTIMUS",
+      "line" : 963
+   },
+   {
+      "tag" : "cka-request-mission-crl-req-period",
+      "sev" : 2,
+      "event" : " Unhandled OID!! OID is 1.3.6.1.4.1.2157.4.7.10.2.0'",
+      "type" : "ev",
+      "node" : "OPTIMUS",
+      "line" : 968,
+      "data" : "'30-SNMP : Unhandled OID!! OID is 1.3.6.1.4.1.2157.4.7.10.2.0'",
+      "date" : "13:50:49.642"
+   },
+   {
+      "event" : " GET_RESPONSE[ Error NO_SUCH_NAME (11) in getRequest! (obj 1 - 1.3.6.1.4.1.2157.4.7.10.2.0 )]'",
+      "sev" : 2,
+      "type" : "ev",
+      "tag" : "cka-request-mission-crl-req-period",
+      "date" : "13:50:49.643",
+      "data" : "'30-SNMP : Optimus -> MGMT: GET_RESPONSE[ Error NO_SUCH_NAME (11) in getRequest! (obj 1 - 1.3.6.1.4.1.2157.4.7.10.2.0 )]'",
+      "line" : 970,
+      "node" : "OPTIMUS"
+   },
+   {
+      "date" : "13:50:49.685",
+      "data" : "'30-SNMP : Unhandled OID!! OID is 1.3.6.1.4.1.2157.4.3.1.10.0'",
+      "line" : 974,
+      "node" : "OPTIMUS",
+      "type" : "ev",
+      "event" : " Unhandled OID!! OID is 1.3.6.1.4.1.2157.4.3.1.10.0'",
+      "sev" : 2,
+      "tag" : "cka-request-mission-crl-req-period"
+   },
+   {
+      "date" : "13:50:49.685",
+      "data" : "'30-SNMP : Optimus -> MGMT: GET_RESPONSE[ Error NO_SUCH_NAME (11) in getRequest! (obj 1 - 1.3.6.1.4.1.2157.4.3.1.10.0 )]'",
+      "line" : 976,
+      "node" : "OPTIMUS",
+      "type" : "ev",
+      "event" : " GET_RESPONSE[ Error NO_SUCH_NAME (11) in getRequest! (obj 1 - 1.3.6.1.4.1.2157.4.3.1.10.0 )]'",
+      "sev" : 2,
+      "tag" : "cka-request-mission-crl-req-period"
+   },
+   {
+      "event" : " Unknown object in set_request! (1.3.6.1.4.1.2157.4.7.7.1.0)'",
+      "sev" : 2,
+      "type" : "ev",
+      "tag" : "cka-request-mission-crl-req-period",
+      "date" : "13:50:49.726",
+      "data" : "'30-SNMP : Unknown object in set_request! (1.3.6.1.4.1.2157.4.7.7.1.0)'",
+      "line" : 981,
+      "node" : "OPTIMUS"
+   },
+   {
+      "date" : "13:50:49.726",
+      "data" : "'30-SNMP : Optimus -> MGMT: GET_RESPONSE[ ERROR NO_SUCH_NAME (11) in setRequest! (obj 1 - 1.3.6.1.4.1.2157.4.7.7.1.0 )]'",
+      "line" : 982,
+      "node" : "OPTIMUS",
+      "event" : " GET_RESPONSE[ ERROR NO_SUCH_NAME (11) in setRequest! (obj 1 - 1.3.6.1.4.1.2157.4.7.7.1.0 )]'",
+      "sev" : 2,
+      "type" : "ev",
+      "tag" : "cka-request-mission-crl-req-period"
+   },
+   {
+      "event" : " Unhandled OID!! OID is 1.3.6.1.4.1.2157.4.7.7.2.0'",
+      "sev" : 2,
+      "type" : "ev",
+      "tag" : "cka-request-mission-crl-req-period",
+      "date" : "13:50:49.768",
+      "data" : "'30-SNMP : Unhandled OID!! OID is 1.3.6.1.4.1.2157.4.7.7.2.0'",
+      "line" : 986,
+      "node" : "OPTIMUS"
+   },
+   {
+      "line" : 988,
+      "node" : "OPTIMUS",
+      "date" : "13:50:49.768",
+      "data" : "'30-SNMP : Optimus -> MGMT: GET_RESPONSE[ Error NO_SUCH_NAME (11) in getRequest! (obj 1 - 1.3.6.1.4.1.2157.4.7.7.2.0 )]'",
+      "tag" : "cka-request-mission-crl-req-period",
+      "event" : " GET_RESPONSE[ Error NO_SUCH_NAME (11) in getRequest! (obj 1 - 1.3.6.1.4.1.2157.4.7.7.2.0 )]'",
+      "sev" : 2,
+      "type" : "ev"
+   },
+   {
+      "data" : "'30-SNMP : Unhandled OID!! OID is 1.3.6.1.4.1.2157.4.7.13.1.0'",
+      "date" : "13:50:49.810",
+      "node" : "OPTIMUS",
+      "line" : 992,
+      "sev" : 2,
+      "event" : " Unhandled OID!! OID is 1.3.6.1.4.1.2157.4.7.13.1.0'",
+      "type" : "ev",
+      "tag" : "cka-request-mission-crl-req-period"
+   },
+   {
+      "data" : "'30-SNMP : Optimus -> MGMT: GET_RESPONSE[ Error NO_SUCH_NAME (11) in getRequest! (obj 1 - 1.3.6.1.4.1.2157.4.7.13.1.0 )]'",
+      "date" : "13:50:49.810",
+      "node" : "OPTIMUS",
+      "line" : 994,
+      "sev" : 2,
+      "event" : " GET_RESPONSE[ Error NO_SUCH_NAME (11) in getRequest! (obj 1 - 1.3.6.1.4.1.2157.4.7.13.1.0 )]'",
+      "type" : "ev",
+      "tag" : "cka-request-mission-crl-req-period"
+   },
+   {
+      "data" : "'30-SNMP : Unhandled OID!! OID is 1.3.6.1.4.1.2157.4.7.9.2.0'",
+      "date" : "13:50:49.851",
+      "node" : "OPTIMUS",
+      "line" : 998,
+      "sev" : 2,
+      "event" : " Unhandled OID!! OID is 1.3.6.1.4.1.2157.4.7.9.2.0'",
+      "type" : "ev",
+      "tag" : "cka-request-mission-crl-req-period"
+   },
+   {
+      "date" : "13:50:49.851",
+      "data" : "'30-SNMP : Optimus -> MGMT: GET_RESPONSE[ Error NO_SUCH_NAME (11) in getRequest! (obj 1 - 1.3.6.1.4.1.2157.4.7.9.2.0 )]'",
+      "line" : 1000,
+      "node" : "OPTIMUS",
+      "type" : "ev",
+      "event" : " GET_RESPONSE[ Error NO_SUCH_NAME (11) in getRequest! (obj 1 - 1.3.6.1.4.1.2157.4.7.9.2.0 )]'",
+      "sev" : 2,
+      "tag" : "cka-request-mission-crl-req-period"
+   },
+   {
+      "type" : "ev",
+      "sev" : 2,
+      "event" : " Unknown object in set_request! (1.3.6.1.4.1.2157.4.7.11.1.0)'",
+      "tag" : "cka-request-mission-crl-req-period",
+      "data" : "'30-SNMP : Unknown object in set_request! (1.3.6.1.4.1.2157.4.7.11.1.0)'",
+      "date" : "13:50:49.893",
+      "node" : "OPTIMUS",
+      "line" : 1005
+   },
+   {
+      "tag" : "cka-request-mission-crl-req-period",
+      "type" : "ev",
+      "sev" : 2,
+      "event" : " GET_RESPONSE[ ERROR NO_SUCH_NAME (11) in setRequest! (obj 1 - 1.3.6.1.4.1.2157.4.7.11.1.0 )]'",
+      "node" : "OPTIMUS",
+      "line" : 1007,
+      "data" : "'30-SNMP : Optimus -> MGMT: GET_RESPONSE[ ERROR NO_SUCH_NAME (11) in setRequest! (obj 1 - 1.3.6.1.4.1.2157.4.7.11.1.0 )]'",
+      "date" : "13:50:49.894"
+   },
+   {
+      "line" : 1011,
+      "node" : "OPTIMUS",
+      "date" : "13:50:49.936",
+      "data" : "'30-SNMP : Unknown object in set_request! (1.3.6.1.4.1.2157.4.7.2.5.1.0)'",
+      "tag" : "cka-request-mission-crl-req-period",
+      "type" : "ev",
+      "event" : " Unknown object in set_request! (1.3.6.1.4.1.2157.4.7.2.5.1.0)'",
+      "sev" : 2
+   },
+   {
+      "node" : "OPTIMUS",
+      "line" : 1012,
+      "data" : "'30-SNMP : Optimus -> MGMT: GET_RESPONSE[ ERROR NO_SUCH_NAME (11) in setRequest! (obj 1 - 1.3.6.1.4.1.2157.4.7.2.5.1.0 )]'",
+      "date" : "13:50:49.936",
+      "tag" : "cka-request-mission-crl-req-period",
+      "sev" : 2,
+      "event" : " GET_RESPONSE[ ERROR NO_SUCH_NAME (11) in setRequest! (obj 1 - 1.3.6.1.4.1.2157.4.7.2.5.1.0 )]'",
+      "type" : "ev"
+   },
+   {
+      "data" : "natkeepalive 5\n \"25-HMI  : Command 'natkeepalive' not recognised. Type 'help' for help.\\r\\n\"\n25-HMI  : Command complete: natkeepalive 5\\r\\n\n",
+      "date" : "13:50:49.966",
+      "line" : 1014,
+      "to" : "OPTIMUS",
+      "type" : "msg",
+      "from" : "FRACTAL",
+      "msg" : "CLI: natkeepalive 5",
+      "tag" : "cka-request-mission-crl-req-period"
+   },
+   {
+      "line" : 1018,
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-BSTBL: PTS Peer Table:\\r\\n\n25-BSTBL:   +----+--------------+--------------+-----+-------+\\r\\n\n25-BSTBL:   |Idx |CT IP Address |PT IP Address |Port |Method |\\r\\n\n25-BSTBL:   +----+--------------+--------------+-----+-------+\\r\\n\n25-BSTBL:   +----+--------------+--------------+-----+-------+\n",
+      "date" : "13:50:49.984",
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "SNMP Table Read:  PTS Peer Table",
+      "type" : "msg",
+      "from" : "OPTIMUS",
+      "to" : "MGMT"
+   },
+   {
+      "line" : 1029,
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-BSTBL: PTS Local Domain Table:\\r\\n\n25-BSTBL:   +-------------+-------------+----+-----+--------+-----+------+-----+-----+-----+---+\\r\\n\n25-BSTBL:   |CT IP Address|PT IP Address|Mask|CTmet|Validity|PTmet|Src IP|SrcPt|SInfo|oInfo|TTL|\\r\\n\n25-BSTBL:   +-------------+-------------+----+-----+--------+-----+------+-----+-----+-----+---+\\r\\n\n25-BSTBL:   +-------------+-------------+----+-----+--------+-----+------+-----+-----+-----+---+\\r\\n\n",
+      "date" : "13:50:50.031",
+      "msg" : "SNMP Table Read:  PTS Local Domain Table",
+      "tag" : "cka-request-mission-crl-req-period",
+      "to" : "MGMT",
+      "type" : "msg",
+      "from" : "OPTIMUS"
+   },
+   {
+      "msg" : "SNMP Table Read:  PTS Remote Domain Table",
+      "tag" : "cka-request-mission-crl-req-period",
+      "to" : "MGMT",
+      "type" : "msg",
+      "from" : "OPTIMUS",
+      "line" : 1038,
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-BSTBL: PTS Remote Domain Table:\\r\\n\n25-BSTBL:   +-------------+-------------+----+-----+--------+-----+------+-----+-----+-----+---+\\r\\n\n25-BSTBL:   |CT IP Address|PT IP Address|Mask|CTmet|Validity|PTmet|Src IP|SrcPt|SInfo|oInfo|TTL|\n\\r\\n\n25-BSTBL:   +-------------+-------------+----+-----+--------+-----+------+-----+-----+-----+---+\\r\\n\n25-BSTBL:   +-------------+-------------+----+-----+--------+-----+------+-----+-----+-----+---+\\r\\n\n",
+      "date" : "13:50:50.078"
+   },
+   {
+      "line" : 1051,
+      "date" : "13:50:51.281",
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-BSTBL: Infrastructure Certificate Table:\\r\\n\n25-BSTBL:   +---------+----+------+----------+--------+----------+----------+-----------+-----------+---------+---------+\\r\\n\n25-BSTBL:   |Cert Hash|Type|Serial|Start Date|End Date|Issuer ESN|ECU Serial|Auth Key Id|Subj Key Id|Suspended|Have Priv|\\r\\n\n25-BSTBL:   +---------+----+------+----------+--------+----------+----------+-----------+-----------+---------+---------+\\r\\n\n25-BSTBL:   +---------+----+------+----------+--------+----------+----------+-----------+-----------+---------+---------+\\r\\n\n",
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "SNMP Table Read:  Infrastructure Certificate Table",
+      "from" : "OPTIMUS",
+      "type" : "msg",
+      "to" : "MGMT"
+   },
+   {
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "SNMP Table Read:  Infrastructure Certificate Table",
+      "type" : "msg",
+      "from" : "OPTIMUS",
+      "to" : "MGMT",
+      "line" : 1060,
+      "data" : "25-BSTBL: SNMP Table Read Start\n\\r\\n\n25-BSTBL: Infrastructure Certificate Table:\\r\\n\n25-BSTBL:   +---------+----+------+----------+--------+----------+----------+-----------+-----------+---------+---------+\\r\\n\n25-BSTBL:   |Cert Hash|Type|Serial|Start Date|End Date|Issuer ESN|ECU Serial|Auth Key Id|Subj Key Id|Suspended|Have Priv|\\r\\n\n25-BSTBL:   +---------+----+------+----------+--------+----------+----------+-----------+-----------+---------+---------+\\r\\n\n25-BSTBL:   +---------+----+------+----------+--------+----------+----------+-----------+-----------+---------+---------+\\r\\n\n",
+      "date" : "13:50:51.350"
+   },
+   {
+      "line" : 1068,
+      "date" : "13:50:51.444",
+      "data" : "keydir\n25-KEYST: Key directory set to ../Keys/\n\\r\\n\n25-HMI  : Command complete: keydir\\r\\n\n",
+      "msg" : "CLI: keydir",
+      "tag" : "cka-request-mission-crl-req-period",
+      "to" : "OPTIMUS",
+      "from" : "FRACTAL",
+      "type" : "msg"
+   },
+   {
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "CLI: keydir /tmp/",
+      "from" : "FRACTAL",
+      "type" : "msg",
+      "to" : "OPTIMUS",
+      "line" : 1072,
+      "date" : "13:50:51.455",
+      "data" : "keydir /tmp/\n25-KEYST: Key directory set to /tmp/\\r\\n\n25-HMI  : Command complete: keydir /tmp/\\r\\n\n"
+   },
+   {
+      "date" : "13:50:51.568",
+      "data" : "keydir ../Keys/\n25-KEYST: Key directory set to ../Keys/\\r\\n\n25-HMI  : Command complete: keydir ../Keys/\\r\\n\n",
+      "line" : 1085,
+      "to" : "OPTIMUS",
+      "from" : "FRACTAL",
+      "type" : "msg",
+      "msg" : "CLI: keydir ../Keys/",
+      "tag" : "cka-request-mission-crl-req-period"
+   },
+   {
+      "line" : 1090,
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-BSTBL: Infrastructure Certificate Table:\\r\\n\n25-BSTBL:   +-------------+----+------+---------------+---------------+------------+------------+-------------+-------------+---------+---------+\\r\\n\n25-BSTBL:   |Cert Hash    |Type|Serial|Start Date     |End Date       |Issuer ESN  |ECU Serial  |Auth Key Id  |Subj Key Id  |Suspended|Have Priv|\\r\\n\n25-BSTBL:   +-------------+----+------+---------------+---------------+------------+------------+-------------+-------------+---------+---------+\\r\\n\n25-BSTBL:   |0xd12c...b74e|FTRY|5     |20170510125051Z|99991231235959Z|D8EFF0000005|D8EFF0000005|0x5f0b...428f|0x5f0b...428f|False    |Y        |\n\\r\\n\n25-BSTBL:   +-------------+----+------+---------------+---------------+------------+------------+-------------+-------------+---------+---------+\\r\\n\n",
+      "date" : "13:50:51.605",
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "SNMP Table Read:  Infrastructure Certificate Table",
+      "type" : "msg",
+      "from" : "OPTIMUS",
+      "to" : "MGMT"
+   },
+   {
+      "line" : 1104,
+      "date" : "13:50:51.691",
+      "data" : "25-BSTBL: SNMP Table Read Start\n\\r\\n\n25-BSTBL: Infrastructure Certificate Table:\\r\\n\n25-BSTBL:   +-------------+----+------+---------------+---------------+------------+------------+-------------+-------------+---------+---------+\\r\\n\n25-BSTBL:   |Cert Hash    |Type|Serial|Start Date     |End Date       |Issuer ESN  |ECU Serial  |Auth Key Id  |Subj Key Id  |Suspended|Have Priv|\n\\r\\n\n25-BSTBL:   +-------------+----+------+---------------+---------------+------------+------------+-------------+-------------+---------+---------+\\r\\n\n25-BSTBL:   |0xd12c...b74e|FTRY|5     |20170510125051Z|99991231235959Z|D8EFF0000005|D8EFF0000005|0x5f0b...428f|0x5f0b...428f|False    |Y        |\n\\r\\n\n25-BSTBL:   +-------------+----+------+---------------+---------------+------------+------------+-------------+-------------+---------+---------+\\r\\n\n",
+      "msg" : "SNMP Table Read:  Infrastructure Certificate Table",
+      "tag" : "cka-request-mission-crl-req-period",
+      "to" : "MGMT",
+      "from" : "OPTIMUS",
+      "type" : "msg"
+   },
+   {
+      "date" : "13:50:52.494",
+      "to" : "128.10.1.4",
+      "type" : "msg",
+      "from" : "OPTIMUS",
+      "msg" : "HTTP REQUEST [:80 POST, ctxtId None]",
+      "tag" : "cka-request-mission-crl-req-period",
+      "line" : 1461
+   },
+   {
+      "type" : "msg",
+      "from" : "OPTIMUS",
+      "date" : "13:50:52.515",
+      "to" : "PT",
+      "tag" : "cka-request-mission-crl-req-period",
+      "line" : 1468,
+      "msg" : "ARP Request[ 128.10.1.4 ]"
+   },
+   {
+      "date" : "13:50:52.515",
+      "data" : "'30-ETHER: Unsuccessful ARP cache lookup for 128.10.1.4'",
+      "line" : 1469,
+      "node" : "OPTIMUS",
+      "type" : "ev",
+      "event" : " Unsuccessful ARP cache lookup for 128.10.1.4'",
+      "sev" : 2,
+      "tag" : "cka-request-mission-crl-req-period"
+   },
+   {
+      "line" : 1470,
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "ARP reply[128.10.1.4]",
+      "from" : "PT",
+      "type" : "msg",
+      "to" : "OPTIMUS",
+      "date" : "13:50:52.516"
+   },
+   {
+      "to" : "OPTIMUS",
+      "date" : "13:50:52.809",
+      "type" : "msg",
+      "from" : "128.10.1.4",
+      "msg" : "HTTP Resp: content-type: application/pkcs7-mime; smime-type=CMC-response [200 ]",
+      "tag" : "cka-request-mission-crl-req-period",
+      "line" : 1548
+   },
+   {
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "SNMP Table Read:  Infrastructure Certificate Table",
+      "from" : "OPTIMUS",
+      "type" : "msg",
+      "to" : "MGMT",
+      "line" : 2413,
+      "date" : "13:50:54.793",
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-BSTBL: Infrastructure Certificate Table:\\r\\n\n25-BSTBL:   +-------------+----+------+---------------+---------------+------------+------------+-------------+-------------+---------+---------+\n\\r\\n\n25-BSTBL:   |Cert Hash    |Type|Serial|Start Date     |End Date       |Issuer ESN  |ECU Serial  |Auth Key Id  |Subj Key Id  |Suspended|Have Priv|\\r\\n\n25-BSTBL:   +-------------+----+------+---------------+---------------+------------+------------+-------------+-------------+---------+---------+\\r\\n\n25-BSTBL:   |0xef07...29a3|CA  |20001 |20170510125038Z|99991231235959Z|000000000000|D8EFF0177000|0xc902...368c|0xbd21...cdb3|False    |N        |\\r\\n\n25-BSTBL:   |0x778d...84ab|IA  |20003 |20170510125052Z|99991231235959Z|D8EFF0177000|D8EFF9999999|0xbd21...cdb3|0xc6fa...dfb3|False    |Y        |\n\\r\\n\n25-BSTBL:   +-------------+----+------+---------------+---------------+------------+------------+-------------+-------------+---------+---------+\\r\\n\n"
+   },
+   {
+      "date" : "13:50:54.935",
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-BSTBL: Infrastructure Certificate Table:\\r\\n\n25-BSTBL:   +-------------+----+------+---------------+---------------+------------+------------+-------------+-------------+---------+---------+\\r\\n\n25-BSTBL:   |Cert Hash    |Type|Serial|Start Date     |End Date       |Issuer ESN  |ECU Serial  |Auth Key Id  |Subj Key Id  |Suspended|Have Priv|\\r\\n\n25-BSTBL:   +-------------+----+------+---------------+---------------+------------+------------+-------------+-------------+---------+---------+\\r\\n\n25-BSTBL:   |0xef07...29a3|CA  |20001 |20170510125038Z|99991231235959Z|000000000000|D8EFF0177000|0xc902...368c|0xbd21...cdb3|False    |N        |\n\\r\\n\n25-BSTBL:   |0x778d...84ab|IA  |20003 |20170510125052Z|99991231235959Z|D8EFF0177000|D8EFF9999999|0xbd21...cdb3|0xc6fa...dfb3|False    |Y        |\\r\\n\n25-BSTBL:   +-------------+----+------+---------------+---------------+------------+------------+-------------+-------------+---------+---------+\\r\\n\n",
+      "line" : 2429,
+      "from" : "OPTIMUS",
+      "type" : "msg",
+      "to" : "MGMT",
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "SNMP Table Read:  Infrastructure Certificate Table"
+   },
+   {
+      "from" : "OPTIMUS",
+      "type" : "msg",
+      "to" : "MGMT",
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "SNMP Table Read:  Infrastructure Certificate Table",
+      "date" : "13:50:55.801",
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-BSTBL: Infrastructure Certificate Table:\\r\\n\n25-BSTBL:   +-------------+----+------+---------------+---------------+------------+------------+-------------+-------------+---------+---------+\\r\\n\n25-BSTBL:   |Cert Hash    |Type|Serial|Start Date     |End Date       |Issuer ESN  |ECU Serial  |Auth Key Id  |Subj Key Id  |Suspended|Have Priv|\\r\\n\n25-BSTBL:   +-------------+----+------+---------------+---------------+------------+------------+-------------+-------------+---------+---------+\\r\\n\n25-BSTBL:   |0xef07...29a3|CA  |20001 |20170510125038Z|99991231235959Z|000000000000|D8EFF0177000|0xc902...368c|0xbd21...cdb3|False    |N        |\\r\\n\n25-BSTBL:   |0x778d...84ab|IA  |20003 |20170510125052Z|99991231235959Z|D8EFF0177000|D8EFF9999999|0xbd21...cdb3|0xc6fa...dfb3|False    |Y        |\\r\\n\n25-BSTBL:   +-------------+----+------+---------------+---------------+------------+------------+-------------+-------------+---------+---------+\\r\\n\n",
+      "line" : 2496
+   },
+   {
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "SNMP Table Read:  Infrastructure Certificate Table",
+      "type" : "msg",
+      "from" : "OPTIMUS",
+      "to" : "MGMT",
+      "line" : 2509,
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-BSTBL: Infrastructure Certificate Table:\\r\\n\n25-BSTBL:   +-------------+----+------+---------------+---------------+------------+------------+-------------+-------------+---------+---------+\\r\\n\n25-BSTBL:   |Cert Hash    |Type|Serial|Start Date     |End Date       |Issuer ESN  |ECU Serial  |Auth Key Id  |Subj Key Id  |Suspended|Have Priv|\\r\\n\n25-BSTBL:   +-------------+----+------+---------------+---------------+------------+------------+-------------+-------------+---------+---------+\\r\\n\n25-BSTBL:   |0xef07...29a3|CA  |20001 |20170510125038Z|99991231235959Z|000000000000|D8EFF0177000|0xc902...368c|0xbd21...cdb3|False    |N        |\\r\\n\n25-BSTBL:   |0x778d...84ab|IA  |20003 |20170510125052Z|99991231235959Z|D8EFF0177000|D8EFF9999999|0xbd21...cdb3|0xc6fa...dfb3|False    |Y        |\\r\\n\n25-BSTBL:   +-------------+----+------+---------------+---------------+------------+------------+-------------+-------------+---------+---------+\n",
+      "date" : "13:50:55.882"
+   },
+   {
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "SNMP Table Read:  Mission Identities Table",
+      "type" : "msg",
+      "from" : "OPTIMUS",
+      "to" : "MGMT",
+      "line" : 2583,
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-BSTBL: Mission Identities Table:\\r\\n\n25-BSTBL:   +-----+----------------+--------+---+-------+---------------+--------------+---------------+-------+--------------+-----+\\r\\n\n25-BSTBL:   |Index|Name            |Org Unit|Org|Country|Req Cert Result|Req CRL Result|End Date       |Overlap|CRL Req Period|MCKM |\\r\\n\n25-BSTBL:   +-----+----------------+--------+---+-------+---------------+--------------+---------------+-------+--------------+-----+\\r\\n\n25-BSTBL:   |1    |TestCkaMissionId|Roke    |CTF|GB     |noCertReceived |noCrlReceived |19700101000000Z|90     |0             |MCKM1|\n\\r\\n\n25-BSTBL:   +-----+----------------+--------+---+-------+---------------+--------------+---------------+-------+--------------+-----+\\r\\n\n",
+      "date" : "13:50:56.923"
+   },
+   {
+      "data" : "25-BSTBL: SNMP Table Read Start\n\\r\\n\n25-BSTBL: Mission Identities Table:\\r\\n\n25-BSTBL:   +-----+----------------+--------+---+-------+---------------+--------------+---------------+-------+--------------+-----+\n\\r\\n\n25-BSTBL:   |Index|Name            |Org Unit|Org|Country|Req Cert Result|Req CRL Result|End Date       |Overlap|CRL Req Period|MCKM |\\r\\n\n25-BSTBL:   +-----+----------------+--------+---+-------+---------------+--------------+---------------+-------+--------------+-----+\\r\\n\n25-BSTBL:   |1    |TestCkaMissionId|Roke    |CTF|GB     |noCertReceived |noCrlReceived |19700101000000Z|90     |0             |MCKM1|\\r\\n\n25-BSTBL:   +-----+----------------+--------+---+-------+---------------+--------------+---------------+-------+--------------+-----+\\r\\n\n",
+      "date" : "13:50:57.008",
+      "line" : 2597,
+      "to" : "MGMT",
+      "type" : "msg",
+      "from" : "OPTIMUS",
+      "msg" : "SNMP Table Read:  Mission Identities Table",
+      "tag" : "cka-request-mission-crl-req-period"
+   },
+   {
+      "type" : "msg",
+      "from" : "OPTIMUS",
+      "to" : "MGMT",
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "SNMP Table Read:  File Import Table",
+      "data" : "25-BSTBL: SNMP Table Read Start\n25-BSTBL: File Import Table:\\r\\n\n25-BSTBL:   +-----+-----+-----+\\r\\n\n25-BSTBL:   |FIdx |LIdx |Data |\n\\r\\n\n25-BSTBL:   +-----+-----+-----+\\r\\n\n25-BSTBL:   +-----+-----+-----+\\r\\n\n",
+      "date" : "13:50:58.007",
+      "line" : 2657
+   },
+   {
+      "data" : "quit\n: suppressed '25-HMI  : Command complete: quit\\r\\n\n",
+      "date" : "13:51:07.694",
+      "line" : 2667,
+      "type" : "msg",
+      "from" : "FRACTAL",
+      "to" : "OPTIMUS",
+      "tag" : "cka-request-mission-crl-req-period",
+      "msg" : "CLI: quit"
+   },
+   {
+      "date" : "13:51:07.699",
+      "event" : "Gracefully Exiting",
+      "sev" : 5,
+      "type" : "ev",
+      "line" : 2669,
+      "node" : "OPTIMUS"
+   }
+]
+}

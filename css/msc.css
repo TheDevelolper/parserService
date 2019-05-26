@@ -1,0 +1,44 @@
+
+
+.str1 {stroke:#0093DD;stroke-width:16;color:#0093DD}
+.str2 {stroke:#0093DD;stroke-width:12}
+.str3 {stroke:#0093DD;stroke-width:10}
+.str4 {stroke:#0093DD;stroke-width:6}
+
+.str0 {stroke:#DA251D;stroke-width:55;color:#DA251D}
+.str6 {stroke:#BB90BB;stroke-width:44;color:#BB90BB}
+.str5 {stroke:#0093DD;stroke-width:4}
+.str7 {stroke:#1F1A17;stroke-width:13}
+
+.fil0 {fill:none}
+.fil2 {fill:#1F1A17}
+.fil1 {fill:#C4E5FA}
+.fil3 {fill:#FFFFFF}
+
+.loghead {font-family:Verdana;font-size:small;font-weight:bold}
+.oddrect {fill:lightgreen;stroke:black;stroke-width:1;opacity:0.2}
+.evenrect {fill:lightblue;stroke:black;stroke-width:1;opacity:0.2}
+
+.eventrect {stroke:black;stroke-width:1;opacity:1.0}
+.eventtext {font-family:Verdana;font-size:x-small}
+
+.spanrect {stroke:black;stroke-width:1;opacity:1.0}
+.spantext {font-family:Verdana;font-size:x-small}
+
+.staterect {fill:lightblue;stroke:black;stroke-width:1;opacity:1.0}
+
+.msghead {font-family:Verdana;font-size:x-small;font-weight:bold}
+.msgtext {font-family:Verdana;font-size:x-small}
+.msgline {stroke:rgb(0,0,0);stroke-width:2}
+.msgarrow {fill:#000000;stroke:#000000;stroke-width:1}
+
+.noderect      {fill:lightgreen;stroke:black;stroke-width:2;opacity:1.0}
+.nodetext      {font-family:Verdana;font-size:small;font-weight:bold;text-align:center}
+.nodetextsmall {font-family:Verdana;font-size:x-small;font-weight:bold;text-align:center}
+.nodeline      {stroke:rgb(200,200,200);stroke-width:2}
+
+.bga {background-color:#efffdd;fill:#efffdd}
+
+/*p,h1,h2,h3,h4,ul,ol,li,div,td,th,address,blockquote,b,i {font-family:'Times,serif'; color:#000000 }
+td tt,td pre { font-family:"Courier New",Courier,monospace; color:blue; }
+*/

@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% block head %}
+	  <script src="https://d3js.org/d3.v3.min.js"></script>
+	  <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+	  <script type="text/javascript" src="http://d3js.org/queue.v1.min.js"></script>
+    <link href="/css/msc.css" rel="stylesheet" type="text/css" />
+	  <script>
+		// Store params which have been passed into the template
+		var global_vars = {
+			input_file: "{{name}}",
+            parser: "{{ parser }}",
+            msc_json: "{{ msc_json }}",
+            loghtml: "{{ loghtml }}"
+		};	
+	  </script>
+{% endblock %}
+
+{% block topNavBrand %}
+	<div class="navbar-brand" onclick="openNav()">
+		<span class="glyphicon glyphicon-filter" aria-hidden="true"></span>
+	</div>
+{% endblock %}
+
+{% block topNav %}
+    <ul class="nav navbar-nav navbar-right">
+		<li>
+			<p class="navbar-li-vert"><b>Parser:</b> {{ parser }}</p>
+			<p class="navbar-li-vert"><b>JSON :</b> {{ msc_json }}</p>
+		</li>
+	</ul>
+{% endblock %}
+
+{% block sideNav %}
+	<div class="pull-right">
+		Select All:<input type="checkbox" class="switch select-all-nodes" checked="true" onclick="setAllNodes()"></input>
+	</div>
+	<ul class="list-group bs-filter" id="bs-filter-by-node">
+	</ul>
+
+	<div class="pull-right">
+		Select All:<input type="checkbox" class="switch select-all-tags" checked="true" onclick="setAllTags()"></input>
+	</div>
+	<ul class="list-group bs-filter" id="bs-filter-by-tag">
+	</ul>  
+{% endblock %}
+
+{% block bodyHeaderArea %}
+{% endblock %}
+
+{% block body %}
+	<div id="titlediv" style="width:140px;height:35px;position:absolute;overflow:hidden;left:0;top:0;"></div>
+	<div id="topdiv" style="width:100%;height:35px;position:absolute;overflow:hidden"></div>
+	<div id="rowdiv" style="width:140px;height:100%;position:absolute;overflow:hidden"></div>
+	<div id="bodydiv" style="width:100%;height:100%;position:absolute;overflow:scroll" onScroll="synchronizeScroll()"></div>
+{% endblock %}
+
+{% block footer %}    
+    <script type="text/javascript" src="/js/plot.js"></script>
+    <script type="text/javascript" src="/js/plot_msc.js"></script>
+{% endblock %}
