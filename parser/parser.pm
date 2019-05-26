@@ -136,7 +136,7 @@ This hash contains the configuration information read in from parser_config.xml
 
 BEGIN
 {
-    my $xmlfile = 'parser_config.xml';    # XML configuration filename
+    my $xmlfile = '/vagrant/parser/parser_config.xml';    # XML configuration filename
 
     print "\nStarting parser.pm\n";
     open( XMLFILE, "<$xmlfile" ) or die( "Could not open XML file: $xmlfile : $!\n" );

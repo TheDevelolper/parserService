@@ -608,7 +608,7 @@ sub output_nodes($)
         elsif ($output_suffix =~ /json/)
         {
             my @master_nodes_arr;
-            foreach my $key (sort {$a <=> $b} keys \%{$master_nodes->{'node'}})
+            foreach my $key (sort {$a <=> $b} keys %{$master_nodes->{'node'}})
             {
                 my $node = $master_nodes->{'node'}->{$key};
                 push(@master_nodes_arr, $node);
@@ -897,7 +897,7 @@ sub msc_parser_gen_ftr($)
 		elsif ($output_format =~ /json/)
 		{            
             my @SIMPLER_PARSER_EVENTS;
-            foreach my $key (sort {$a <=> $b} keys $MSC_PARSER_EVENTS{'event'})
+            foreach my $key (sort {$a <=> $b} keys %{$MSC_PARSER_EVENTS{'event'}})
             {
                 push(@SIMPLER_PARSER_EVENTS, $MSC_PARSER_EVENTS{'event'}->{$key});
             }

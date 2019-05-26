@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import os
 import subprocess
 import logging
@@ -135,3 +136,6 @@ def send_css(path):
 @app.route('/config')
 def send_():
 	return send_from_directory('parser', "parser_config.xml")
+
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0')

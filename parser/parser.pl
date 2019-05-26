@@ -103,7 +103,7 @@ sub parse_params
 # main program
 parse_params();
 
-my $parser_cmd = "perl parsers/$PARSER";
+my $parser_cmd = "perl /vagrant/parser/parsers/$PARSER";
 print "$PARSER:\n   $PARSER_CONFIG{'desc'}\n";
 $parser_cmd .= "/".$PARSER_CONFIG{'pl'};
 $parser_cmd .= " -l \"$logfile\"" if( defined($logfile) );
