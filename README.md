@@ -6,7 +6,7 @@ Originally authored by Donald Jones.
 
 This Git project provides a webservice which allows parsers to be written that convert flat text files into interactive message sequence charts (MSCs).
 
-![simple MSC](simple_msc.png)
+![simple MSC](doc/simple_msc.png)
 
 Supported MSC objects are made up of either:
 
@@ -20,7 +20,7 @@ Supported MSC objects are made up of either:
 
 All interactions can be allocated a timestamp and / or tags, which can be used to differentiate interactions occurring in parallel, e.g. call IDs.
 
-![simple MSC](sip_msg.png)
+![simple MSC](doc/sip_msg.png)
 
 For a given parser it is possible to configure a particular order of nodes, via a <parser>/config.xml file
 
