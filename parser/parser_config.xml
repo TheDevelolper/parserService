@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <parser_config>
-  <parser name="fractal_log" title="Fractal Log" ext="txt" pl="fractal_log_parser.pl" desc="Extracts events from Fractal Test Logs."/>
-  <parser name="remote_runner_log" title="Remote Runner Log" ext="txt" pl="remote_runner_log_parser.pl" desc="Extracts events from Fractal Remote Runner Logs."/>
   <parser name="sip_msg" title="SIP Msg" ext="txt" pl="sip_msg_parser.pl" desc="Decodes SIP messages from Wireshark logs."/>
   <parser name="simple" title="Simple" ext="txt" pl="simple_parser.pl" desc="Create MSCs with a simple mscgen like syntax."/>
   <parser name="syslog" title="Syslog" ext="" pl="syslog_parser.pl" desc="Create MSCs from linux syslogs."/>
