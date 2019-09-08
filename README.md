@@ -58,3 +58,10 @@ Clone the repo
     ./docker_build.sh
 
 Open http://localhost:5000
+
+Select an appropriate parser and file to upload.
+For test purposes you can use the following combinations:
+- sip_msg: testdata/sip.txt
+- simple/basic_handin.txt
+- simple/simple_msc.txt
+
